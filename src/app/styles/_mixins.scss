@@ -1,0 +1,10 @@
+// Clearfix
+
+// Clearfix
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
