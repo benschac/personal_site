@@ -1,14 +1,19 @@
+
+// Change all elements to use box-sizing.
 * {
   box-sizing: border-box;
 
   &:before,
   &:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 }
 
+html {
+  // This normalizes font's for rem units so font's base are 10px.
+  // ex. 1.5rem are 15px.
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 400;
 
-body {
-  margin-top: 3rem;
-  text-align: center;
 }
