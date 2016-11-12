@@ -1,43 +1,48 @@
-
-
-// L stands for layout.  Max width of this grid is going
-// to be 1140px.  This is particularly arbitary.  But,
-// I'm just going to go with it.
-
-
-
-.l-wrap {
-  max-width: 1140px;
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $container-width;
   margin-right: auto;
   margin-left: auto;
-  background-color: rgba(0, 255, 0, .5);
+  padding: 0 20px;
 }
 
-
-
-
-.three-col-grid .grid-item {
-  @include clearfix;
-  width: 33.33333%;
+.column,
+.columns {
   float: left;
+  width: 100%;
 }
 
-.grid-item {
-  width: calc((100% - 20px * 2) / 3);
-  margin-right: 20px;
-
-  &:last-child {
-    margin-right: 0;
-    float: right;
+// If the device is larger than 400px;
+@media(#{bp-larger-than-mobile}) {
+  .container {
+    width: $container-width-larger-than-moblie;
+    padding: 0;
   }
 }
 
 
-// To do, for loop.
+// If the device is larger than 550px;
+@media (#{bp-larger-than-phablet}) {
+  .container {
+    width: $container-width-larger-than-phablet;
+    padding: 0;
+  }
 
-// @for $i from 1 through 12 {
-//   .col-#{$i}-12 {
-//     width: calc(#{$i} / 12);
-//     background-color: red;
-//   }
-// }
+  .column,
+  .colums {
+    margin-left: $column-margin;
+  }
+
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0;
+  }
+
+  // Grid width values.
+
+  .one.column,
+  .one.columns { width: grid-column-width(1); }
+
+
+}

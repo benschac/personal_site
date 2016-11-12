@@ -6,8 +6,15 @@ $bp-larger-than-phablet:    "min-width: 550px"  !default;
 $bp-larger-than-mobile:     "min-width: 400px"  !default;
 
 // Grid containers
-$grid-container-width: 960px !default;
-$
+$container-width: 960px !default;
+$container-width-larger-than-moblie: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns;
+$column-margin: 4% !default;
+
+
+// Colors To-Do.
 
 
 
