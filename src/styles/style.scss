@@ -1,19 +1,7 @@
 @import 'variables';
 @import 'reset';
 @import 'mixins';
-// default document styles. margin/padding whereever it is on the page.
 @import 'base';
-
-// mixins
-// Divide page into sections.
 @import 'layout';
-// reusable parts of page.
-@import 'module';
-// States of modules (expand or collapse)
 @import 'state';
-// Theming -- what modules look like when theme is used.
 @import 'theme';
-
-p {
-  color: yellow;
-}

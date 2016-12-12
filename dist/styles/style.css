@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -135,6 +137,18 @@ table {
   border-spacing: 0;
 }
 
+/*
+From the book:
+https://smacss.com/book/categorizing
+
+Base rules are the defaults. They are almost exclusively single element selectors
+but it could include attribute selectors, pseudo-class selectors,
+child selectors or sibling selectors.
+Essentially, a base style says that wherever this element is on the page,
+it should look like this.
+
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -144,6 +158,35 @@ body {
   text-align: center;
 }
 
-p {
-  color: yellow;
-}
+/*
+From the book:
+https://smacss.com/book/categorizing
+
+
+Layout rules divide the page into sections.
+Layouts hold one or more modules together.
+
+*/
+
+/*
+From the book:
+https://smacss.com/book/categorizing
+
+
+Modules are the reusable, modular parts of our design. They are the callouts,
+the sidebar sections, the product lists and so on.
+
+
+To-do: each one of these will be a different module.
+
+*/
+
+/*
+From the book:
+https://smacss.com/book/categorizing
+
+
+Theme rules are similar to state rules in that they describe how modules or
+layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it.
+
+*/
