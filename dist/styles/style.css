@@ -140,13 +140,8 @@ table {
 }
 
 body {
-  font-size: 0.75rem;
-  background-color: red;
-}
-
-p {
   font-size: 18px;
-  color: green;
+  text-align: center;
 }
 
 p {
