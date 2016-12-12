@@ -13,3 +13,7 @@
 @import 'state';
 // Theming -- what modules look like when theme is used.
 @import 'theme';
+
+p {
+  color: yellow;
+}
