@@ -1,0 +1,36 @@
+
+
+
+
+
+body {
+  @extend %p;
+
+}
+
+blockquote {
+  @extend %bq;
+}
+
+h1 {
+  @extend %h;
+}
+
+h2 {
+  @extend %sh;
+}
+
+h3 {
+  @extend %ssh;
+}
+
+h4 {
+  @extend %sssh;
+}
+
+p {
+  @extend %p;
+}
+.hero-title {
+  @extend %hero;
+}

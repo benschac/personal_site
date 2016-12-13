@@ -128,15 +128,200 @@ table {
   border-spacing: 0;
 }
 
+body,
+p {
+  font-size: 16px;
+  line-height: 2.83;
+}
+
+@media screen and (min-width: 480px) {
+  body,
+  p {
+    font-size: 16px;
+    line-height: 2.83;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body,
+  p {
+    font-size: 20px;
+    line-height: 2.6;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body,
+  p {
+    font-size: 22px;
+    line-height: 2.6;
+  }
+}
+
+blockquote {
+  font-size: 19.2px;
+  line-height: 2.36;
+}
+
+@media screen and (min-width: 480px) {
+  blockquote {
+    font-size: 21.6px;
+    line-height: 2.09;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  blockquote {
+    font-size: 26px;
+    line-height: 2;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  blockquote {
+    font-size: 28.6px;
+    line-height: 2;
+  }
+}
+
+h4 {
+  font-size: 27.6px;
+  line-height: 1.64;
+}
+
+@media screen and (min-width: 480px) {
+  h4 {
+    font-size: 39.4px;
+    line-height: 2.3;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  h4 {
+    font-size: 43.9px;
+    line-height: 2.37;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  h4 {
+    font-size: 48.3px;
+    line-height: 2.37;
+  }
+}
+
+h3 {
+  font-size: 33.2px;
+  line-height: 1.36;
+}
+
+@media screen and (min-width: 480px) {
+  h3 {
+    font-size: 53.1px;
+    line-height: 1.7;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  h3 {
+    font-size: 57.1px;
+    line-height: 1.82;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  h3 {
+    font-size: 62.8px;
+    line-height: 1.82;
+  }
+}
+
+h2 {
+  font-size: 39.8px;
+  line-height: 2.27;
+}
+
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 71.7px;
+    line-height: 1.89;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  h2 {
+    font-size: 74.3px;
+    line-height: 2.1;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  h2 {
+    font-size: 81.7px;
+    line-height: 2.1;
+  }
+}
+
+h1 {
+  font-size: 47.8px;
+  line-height: 1.89;
+}
+
+@media screen and (min-width: 480px) {
+  h1 {
+    font-size: 96.9px;
+    line-height: 1.87;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  h1 {
+    font-size: 96.5px;
+    line-height: 2.15;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  h1 {
+    font-size: 106.2px;
+    line-height: 2.15;
+  }
+}
+
+.hero-title {
+  font-size: 57.3px;
+  line-height: 2.37;
+}
+
+@media screen and (min-width: 480px) {
+  .hero-title {
+    font-size: 130.8px;
+    line-height: 2.08;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .hero-title {
+    font-size: 125.5px;
+    line-height: 2.07;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-title {
+    font-size: 138px;
+    line-height: 2.07;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-size: 18px;
-  text-align: center;
-}
-
-p {
-  color: yellow;
+  font-family: "Raleway",sans-serif;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 2px;
+  margin: 2px;
 }
