@@ -184,3 +184,10 @@ body {
   font-weight: 400;
   font-family: "Raleway",sans-serif;
 }
+
+.l-container {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 17.5%;
+}

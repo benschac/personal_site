@@ -20,3 +20,11 @@ body {
   font-weight: $default-font-weight;
   font-family: $default-font-family;
 }
+
+.l-container {
+  // max-width: 50rem;
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 17.5%;
+}
