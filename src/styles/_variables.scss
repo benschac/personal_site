@@ -35,7 +35,7 @@ Type-Scale:
 
 $font-scale:            1.2;
 $line-height:           1.618;
-$paragraph-font-size:   1.6em;
+$paragraph-font-size:   1.8em;
 
 $h5-font-size:          $paragraph-font-size + $font-scale;
 $h4-font-size:          $h5-font-size + $font-scale;
@@ -46,7 +46,7 @@ $small-font-size:       ($paragraph-font-size - $font-scale);
 $default-font-size:     62.5%; //10px (most browser sizes).
 $default-font-family:   'Raleway', sans-serif;
 $default-font-weight:   400;
-$default-margin:        24px; // base + line-height;
+$default-margin:        12px; // base + line-height;
 
 
 // To-do: Define breakpoints.

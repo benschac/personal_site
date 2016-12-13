@@ -137,7 +137,8 @@ h6,
 p,
 small {
   line-height: 1.618;
-  margin: 24px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 h1,
@@ -147,31 +148,31 @@ h3 {
 }
 
 h1 {
-  font-size: 7.6em;
+  font-size: 7.8em;
 }
 
 h2 {
-  font-size: 6.4em;
+  font-size: 6.6em;
 }
 
 h3 {
-  font-size: 5.2em;
+  font-size: 5.4em;
 }
 
 h4 {
-  font-size: 4em;
+  font-size: 4.2em;
 }
 
 h5 {
-  font-size: 2.8em;
+  font-size: 3em;
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 small {
-  font-size: .4em;
+  font-size: .6em;
 }
 
 * {
