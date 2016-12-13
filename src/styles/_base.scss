@@ -16,9 +16,7 @@ it should look like this.
 }
 
 body {
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
   font-family: $default-font-family;
-  margin: 0 auto;
-  max-width: 80rem;
-  padding: 2px;
-  margin: 2px;
 }

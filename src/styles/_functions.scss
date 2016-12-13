@@ -1,51 +1,54 @@
-@function generate-font-size($label, $breakpoint) {
-  // https://www.sitepoint.com/sass-responsive-typography/
-  // index (scss function): gets the position of an item in a list.
-  $label-position: index($scale-labels, $label);
-  // map-get: returns the value that matches the specified key in a given map.
-  $breakpoint-base-font-size: map-get(map-get($typography, $breakpoint), base-font-size);
-  $breakpoint-type-scale: map-get(map-get($typography, $breakpoint), type-scale);
-  $breakpoint-vertical-rhythm: map-get(map-get($typography, $breakpoint), vertical-rhythm);
-  $font-size: $breakpoint-base-font-size;
-
-  @for $i from 1 to $label-position {
-    $font-size: $font-size * $breakpoint-type-scale;
-  }
-
-  $base-vertical-rhythm: $breakpoint-base-font-size * $breakpoint-vertical-rhythm;
-  $line-height: round($font-size / $base-vertical-rhythm) * $base-vertical-rhythm / $font-size;
-  $return: join($font-size, $line-height);
-
-  @return $return;
-}
+// Going to hold off on responsive typography right now until I get a better handle
+// on the core concepts.
 
 
-// Loop through each label.
-@each $label in $scale-labels {
-  /*
-  “placeholder selector”. These look like class and id selectors, except the # or .
-  is replaced by %. They’re meant to be used with the @extend directive; for more
-  information see @extend-Only Selectors.
-  */
-  %#{$label} {
-    @each $breakpoint, $data in $typography {
-    // $breakpoint represents the breakpoint’s key,
-    // $data is the nested map containing its data
-      $generated-values: generate-font-size($label, $breakpoint);
-      $font-size: round(nth($generated-values, 1)* 10)/10;
-      $line-height: round(nth($generated-values, 2)*200)/100;
 
-      @if map-get($data, min-width) != null {
-        @media screen and (min-width: map-get($data, min-width)) {
-        // generate CSS output here
-          font-size: $font-size;
-          line-height: $line-height;
-        }
-      } @else {
-      // generate CSS output here
-        font-size: $font-size;
-        line-height: $line-height;
-      }
-    }
-  }
-}
+// @function generate-font-size($label, $breakpoint) {
+//   // https://www.sitepoint.com/sass-responsive-typography/
+//   // index (scss function): gets the position of an item in a list.
+//   $label-position: index($scale-labels, $label);
+//   // map-get: returns the value that matches the specified key in a given map.
+//   $breakpoint-base-font-size: map-get(map-get($typography, $breakpoint), base-font-size);
+//   $breakpoint-type-scale: map-get(map-get($typography, $breakpoint), type-scale);
+//   $breakpoint-vertical-rhythm: map-get(map-get($typography, $breakpoint), vertical-rhythm);
+//   $font-size: $breakpoint-base-font-size;
+//
+//   @for $i from 1 to $label-position {
+//     $font-size: $font-size * $breakpoint-type-scale;
+//   }
+//
+//   $base-vertical-rhythm: $breakpoint-base-font-size * $breakpoint-vertical-rhythm;
+//   $line-height: round($font-size / $base-vertical-rhythm) * $base-vertical-rhythm / $font-size;
+//   $return: join($font-size, $line-height);
+//
+//   @return $return;
+// }
+//
+//
+// // Loop through each label.
+// @each $label in $scale-labels {
+//   // “placeholder selector”. These look like class and id selectors, except the # or .
+//   // is replaced by %. They’re meant to be used with the @extend directive; for more
+//   // information see @extend-Only Selectors.
+//   %#{$label} {
+//     @each $breakpoint, $data in $typography {
+//       // $breakpoint represents the breakpoint’s key,
+//       // $data is the nested map containing its data
+//       $generated-values: generate-font-size($label, $breakpoint);
+//       $font-size: round(nth($generated-values, 1)* 10) / 10;
+//       $line-height: round(nth($generated-values, 2)*200) / 100;
+//
+//       @if map-get($data, min-width) != null {
+//         @media screen and (min-width: map-get($data, min-width)) {
+//           // generate CSS output here
+//           font-size: $font-size;
+//           line-height: $line-height;
+//         }
+//       } @else {
+//         // generate CSS output here
+//         font-size: $font-size;
+//         line-height: $line-height;
+//       }
+//     }
+//   }
+// }
