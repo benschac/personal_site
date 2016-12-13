@@ -1,2 +1,70 @@
-$default-font-size:     18px;
-$small-font-size:       0.75rem;
+// Maps
+
+/*
+  base-font-size: value in each nested map sets the normal font-size for body text.
+
+  verticle-rhythm: value sets the line-height for normal body text and is used to
+  create vertical rhythm for headings and other non-<p> elements.
+
+  type-scale: value determines how much larger each step up the type scale gets.
+ For example, on our default size, paragraph text will be 16px, the next size
+ up (let’s call it “block quote” for now) will be 16px × 1.2, or 19.2px.
+
+____________________________________________________________________________________
+
+Vertical-Rhythm:
+- a strong, regular, repeated pattern of movement or sound.
+- Keeping our vertical rhythm consistent means that we can
+create a visually more-relaxing experience, evoking a feeling of
+familiarity to our users, removing visual barriers and making content
+far more readable.
+
+Creation:
+- two major things you want to pay attention to are the font sizes and line heights
+- Base font-size 16px x 1.4-1.6 line height (24px :));
+
+____________________________________________________________________________________
+
+Type-Scale:
+- The ratio difference between the sizing of your fonts.
+
+*/
+
+
+// Defaults
+$default-font-size:     16px;
+$default-font-family:   'Raleway', sans-serif;
+
+// breakpoints for media queries.
+$medium:  480px;
+$large:   960px;
+$x-large: 1300px;
+
+$typography: (
+  default: (
+    base-font-size: $default-font-size,
+    vertical-rhythm: 1.414,
+    type-scale: 1.2,
+    min-width: null
+  ),
+  medium: (
+    base-font-size: $default-font-size,
+    vertical-rhythm: 1.414,
+    type-scale: 1.35,
+    min-width: $medium
+  ),
+  large: (
+    base-font-size: 20px,
+    vertical-rhythm: 1.3,
+    type-scale: 1.3,
+    min-width: $large
+  ),
+  xlarge: (
+    base-font-size: 22px,
+    vertical-rhythm: 1.3,
+    type-scale: 1.3,
+    min-width: $x-large
+  )
+);
+
+$scale-labels: (p, bq, ssssh, sssh, ssh, sh, h, hero);

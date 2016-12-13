@@ -1,9 +1,24 @@
+/*
+From the book:
+https://smacss.com/book/categorizing
+
+Base rules are the defaults. They are almost exclusively single element selectors
+but it could include attribute selectors, pseudo-class selectors,
+child selectors or sibling selectors.
+Essentially, a base style says that wherever this element is on the page,
+it should look like this.
+
+*/
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-size: $default-font-size;
-  text-align: center;
+  font-family: $default-font-family;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 2px;
+  margin: 2px;
 }
