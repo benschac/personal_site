@@ -9,4 +9,12 @@ Layouts hold one or more modules together.
 */
 
 // Modules to import.
+
+.l-container {
+  
+  margin: 0 auto;
+  background: red;
+}
+
+
 @import 'module';

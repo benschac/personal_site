@@ -16,6 +16,7 @@ it should look like this.
 }
 
 body {
-  font-size: $default-font-size;
   font-family: $default-font-family;
+  margin: 0 auto;
+  max-width: 80rem;
 }
