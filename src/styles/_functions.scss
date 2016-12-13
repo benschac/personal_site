@@ -1,4 +1,5 @@
 @function generate-font-size($label, $breakpoint) {
+  // https://www.sitepoint.com/sass-responsive-typography/
   // index (scss function): gets the position of an item in a list.
   $label-position: index($scale-labels, $label);
   // map-get: returns the value that matches the specified key in a given map.

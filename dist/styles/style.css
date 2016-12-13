@@ -146,7 +146,7 @@ p {
   body,
   p {
     font-size: 20px;
-    line-height: 2.83;
+    line-height: 2.6;
   }
 }
 
@@ -172,7 +172,7 @@ blockquote {
 
 @media screen and (min-width: 960px) {
   blockquote {
-    font-size: 28.3px;
+    font-size: 26px;
     line-height: 2;
   }
 }
@@ -198,8 +198,8 @@ h4 {
 
 @media screen and (min-width: 960px) {
   h4 {
-    font-size: 56.5px;
-    line-height: 2;
+    font-size: 43.9px;
+    line-height: 2.37;
   }
 }
 
@@ -224,8 +224,8 @@ h3 {
 
 @media screen and (min-width: 960px) {
   h3 {
-    font-size: 80px;
-    line-height: 2.12;
+    font-size: 57.1px;
+    line-height: 1.82;
   }
 }
 
@@ -250,8 +250,8 @@ h2 {
 
 @media screen and (min-width: 960px) {
   h2 {
-    font-size: 113.1px;
-    line-height: 2;
+    font-size: 74.3px;
+    line-height: 2.1;
   }
 }
 
@@ -276,8 +276,8 @@ h1 {
 
 @media screen and (min-width: 960px) {
   h1 {
-    font-size: 159.9px;
-    line-height: 2.12;
+    font-size: 96.5px;
+    line-height: 2.15;
   }
 }
 
@@ -302,8 +302,8 @@ h1 {
 
 @media screen and (min-width: 960px) {
   .hero-title {
-    font-size: 226px;
-    line-height: 2;
+    font-size: 125.5px;
+    line-height: 2.07;
   }
 }
 
@@ -322,9 +322,6 @@ body {
   font-family: "Raleway",sans-serif;
   margin: 0 auto;
   max-width: 80rem;
-}
-
-.l-container {
-  margin: 0 auto;
-  background: red;
+  padding: 2px;
+  margin: 2px;
 }
