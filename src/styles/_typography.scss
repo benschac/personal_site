@@ -1,51 +1,40 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-small {
-  line-height: $line-height;
-  margin-left: $default-margin;
-  margin-right: $default-margin;
-}
+/*
+______________________________________________________
 
-h1,
-h2,
-h3 {
-  font-weight: 700;
-}
+Typography:
+- Viewport units refer to a percentage of the browser’s viewport
+dimensions.
+For example, 1 viewport width (vw) is equal to 1% of the viewport’s
+width.
 
+- Use em units that are relative to the root font size.
+- Root font size is based off viewport size which adjusts
+em units.
+
+______________________________________________________
+*/
+
+// html {
+//   font-size: 2vw;
+// }
 //
-// h6 {
-//   font-size:
+// h1 {
+//   font-size: 2em;
+// }
+//
+// @media screen and (min-width: 50em) {
+//   html {
+//     font-size: 2vw;
+//   }
+// }
+//
+// @media screen and (min-width: 75em) {
+//   html {
+//     font-size: 1.5em;
+//   }
 // }
 
-h1 {
-  font-size: $h1-font-size;
-}
 
-h2 {
-  font-size: $h2-font-size;
-}
-
-h3 {
-  font-size: $h3-font-size;
-}
-
-h4 {
-  font-size: $h4-font-size;
-}
-
-h5 {
-  font-size: $h5-font-size;
-}
-
-p {
-  font-size: $paragraph-font-size;
-}
-
-small {
-  font-size: $small-font-size;
+li {
+  list-style: none;
 }

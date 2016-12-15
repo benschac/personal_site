@@ -1,9 +1,14 @@
+
+
+@import 'normalize';
+// Not going to fuck around with responsive.
+// type or custom type setting right now.
+// @import 'reset';
 @import 'variables';
-@import 'reset';
 @import 'functions';
 @import 'mixins';
-@import 'typography';
 @import 'base';
+@import 'typography';
 @import 'layout';
 @import 'state';
 @import 'theme';

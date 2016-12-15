@@ -13,18 +13,24 @@ it should look like this.
 
 * {
   box-sizing: border-box;
+  font-family: "Raleway";
 }
 
-body {
-  font-size: $default-font-size;
-  font-weight: $default-font-weight;
-  font-family: $default-font-family;
+a {
+  text-decoration: none;
+  color: #000;
 }
 
-.l-container {
-  // max-width: 50rem;
-  position: relative;
-  display: block;
-  text-align: center;
-  margin-top: 17.5%;
-}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

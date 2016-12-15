@@ -1,193 +1,387 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
   margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
 
 article,
 aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-hgroup,
-menu,
 nav,
 section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-small {
-  line-height: 1.618;
-  margin-left: 12px;
-  margin-right: 12px;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 700;
-}
-
 h1 {
-  font-size: 7.8em;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
-h2 {
-  font-size: 6.6em;
+figcaption,
+figure,
+main {
+  display: block;
 }
 
-h3 {
-  font-size: 5.4em;
+figure {
+  margin: 1em 40px;
 }
 
-h4 {
-  font-size: 4.2em;
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
-h5 {
-  font-size: 3em;
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
-p {
-  font-size: 1.8em;
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
 }
 
 small {
-  font-size: .6em;
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Raleway";
 }
 
-body {
-  font-size: 62.5%;
-  font-weight: 400;
-  font-family: "Raleway",sans-serif;
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+#main-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 3px solid #0f0;
+}
+
+.brand {
+  float: left;
+  margin: 1em 0;
+  padding: 0 10px;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .brand {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+  }
+}
+
+.nav-items {
+  float: right;
+  margin: 2.2em 0;
+  padding: 0 6px;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .nav-items {
+    margin: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 3px 4px;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .nav-item {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+  }
 }
 
 .l-container {
-  position: relative;
-  display: block;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+#hero {
+  margin-top: 250px;
   text-align: center;
-  margin-top: 17.5%;
+}
+
+#hero h1 {
+  font-size: 60px;
+}
+
+#hero h2 {
+  font-size: 45px;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  #hero {
+    display: block;
+    width: 100%;
+    top: 200px;
+  }
+}
+
+.avatar {
+  border-radius: 1%;
+}
+
+a[class^='underline'] {
+  text-decoration: none;
+  padding-left: 0.125em;
+  padding-right: 0.125em;
+  padding-bottom: 0.05em;
+  position: relative;
+}
+
+a[class^='underline']::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  border-bottom: 0.125em solid #3498db;
+  transition: all 0.35s;
+}
+
+a[class^='underline']:hover::after {
+  transition: all 0.35s;
+}
+
+a.underline_from_center::after {
+  right: 50%;
+  left: 50%;
+}
+
+a.underline_from_center:hover::after {
+  right: 0;
+  left: 0;
 }

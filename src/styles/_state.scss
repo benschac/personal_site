@@ -9,3 +9,33 @@ They are about describing how a module or layout looks on screens that are small
 They are also about describing how a module might look in different views like the home page or the inside page.
 
 */
+
+
+a[class^='underline'] {
+  text-decoration: none;
+  padding-left: 0.125em;
+  padding-right: 0.125em;
+  padding-bottom: 0.05em;
+  position: relative;
+}
+
+a[class^='underline']::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  border-bottom: 0.125em solid #3498db;
+  transition: all 0.35s;
+}
+
+a[class^='underline']:hover::after {
+  transition: all 0.35s;
+}
+
+a.underline_from_center::after {
+  right: 50%;
+  left: 50%;
+}
+a.underline_from_center:hover::after {
+  right: 0;
+  left: 0;
+}

@@ -4,6 +4,7 @@ const reload = browserSync.reload;
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
+const sourcemap = require('gulp-sourcemaps');
 const concat = require('gulp-concat-css');
 
 
@@ -27,11 +28,14 @@ gulp.task('clean', function() {
 gulp.task('sass', ['clean'], () => {
   return gulp.src('src/styles/*.scss')
              .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+             .pipe(sourcemap.init())
              .pipe(autoprefixer({
                browsers: ['last 2 versions'],
                cascade: false
              }))
+
              .pipe(concat("./style.css"))
+             .pipe(sourcemap.write())
              .pipe(gulp.dest('./dist/styles/'))
              .pipe(browserSync.stream());
 })
