@@ -217,10 +217,4 @@ var headText = new WordShuffler(headline,{
   mixSpecialCharacters : true
 });
 
-
-
-  shuffler.addEventListener('load',function () {
-    headText.restart();
-    pText.restart();
-    buttonText.restart();
-  });
+headText.restart();
