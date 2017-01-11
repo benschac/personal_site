@@ -197,18 +197,14 @@ function WordShuffler(holder,opt){
   }
 
   this.writeWord(this.holder.innerHTML);
-
-
-  console.log(this.currentWord);
   update(time);
 }
 
 
 
 
-var headline = document.querySelector('#hero h1');
-var subHeadline = document.getElementById('#hero h2');
-var shuffler = document.getElementById('shuffler');
+const headline = document.querySelector('#hero h1');
+const shuffler = document.getElementById('shuffler');
 
 var headText = new WordShuffler(headline,{
   textColor : '#000',
