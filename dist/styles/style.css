@@ -278,8 +278,9 @@ li {
 #main-nav {
   position: fixed;
   width: 100%;
+  background: #fff;
   top: 0;
-  border-bottom: 3px solid #0f0;
+  border-bottom: 3px solid lime;
 }
 
 .brand {
@@ -344,6 +345,41 @@ li {
   font-size: 45px;
 }
 
+div.projects {
+  margin-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15em;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.project-tile {
+  width: calc(33% - 5px);
+  text-align: center;
+  background: lime;
+  height: 20rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.project-tile span.letter {
+  font-size: 10rem;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
 @media (min-width: 360px) and (max-width: 480px) {
   #hero {
     display: block;
@@ -357,19 +393,19 @@ li {
 }
 
 a[class^='underline'] {
+  padding-bottom: .05em;
   text-decoration: none;
-  padding-left: 0.125em;
-  padding-right: 0.125em;
-  padding-bottom: 0.05em;
+  padding-left: .125em;
+  padding-right: .125em;
   position: relative;
 }
 
 a[class^='underline']::after {
+  border-bottom: 0.125em solid #3498db;
   content: '';
   position: absolute;
   top: 100%;
-  border-bottom: 0.125em solid #3498db;
-  transition: all 0.35s;
+  transition: .35s;
 }
 
 a[class^='underline']:hover::after {

@@ -14,8 +14,9 @@ Layouts hold one or more modules together.
 #main-nav {
   position: fixed;
   width: 100%;
+  background: $navigation-background;
   top: 0;
-  border-bottom: 3px solid #0f0;
+  border-bottom: 3px solid $navigation-border;
 }
 
 
@@ -70,7 +71,6 @@ Layouts hold one or more modules together.
 }
 
 #hero {
-
   margin-top: 300px;
   text-align: center;
 
@@ -84,6 +84,33 @@ Layouts hold one or more modules together.
   }
 }
 
+div.projects {
+  margin-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15em;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.project-tile {
+  width: calc(33% - 5px);
+  text-align: center;
+  background: $navigation-border;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  span.letter {
+    font-size: 10rem;
+    justify-content: flex-end;
+  }
+}
 
 
 @media (min-width: 360px) and (max-width: 480px) {
