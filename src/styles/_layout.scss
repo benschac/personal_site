@@ -143,10 +143,29 @@ div.projects {
   padding-bottom: 20px;
   margin-bottom: 200px;
 
-  clip-path: polygon(0 0, 3000px 0, 3000px 70%, 0 100%);
+  clip-path: polygon(0 0, 3000px 70%, 3000px 70%, 0 100%);
 }
 
 .about {
   width: 90%;
   margin: 0 auto;
+}
+
+div.footer {
+  margin-bottom: 200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__cta {
+  position: absolute;
+  font-size: 40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+
 }

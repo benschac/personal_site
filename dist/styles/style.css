@@ -270,6 +270,65 @@ a.underline_from_center:hover::after {
   left: 0;
 }
 
+.circle {
+  width: 400px;
+  margin: 0 auto;
+  animation-duration: 4s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  animation: 4s infinite-spinning infinite;
+  animation-timing-function: linear;
+}
+
+[class^='side'] {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+[class$='1'] {
+  border-radius: 100% 0 0 0;
+  border: 1px solid #0f0;
+  border-right: none;
+  border-bottom: none;
+}
+
+[class$='2'] {
+  border-radius: 0 100% 0 0;
+  border: 1px solid grey;
+  border-bottom: none;
+  border-left: none;
+}
+
+[class$='3'] {
+  border-radius: 0 0 0 100%;
+  border: 1px solid grey;
+  border-top: none;
+  border-right: none;
+}
+
+[class$='4'] {
+  border-radius: 0 0 100% 0;
+  border: 1px solid #0f0;
+  border-top: none;
+  border-left: none;
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  to {
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+  }
+}
+
 nav.shrink .brand {
   margin-top: -10px;
   margin-bottom: 0;
@@ -461,11 +520,32 @@ div.projects {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 200px;
-  -webkit-clip-path: polygon(0 0, 3000px 0, 3000px 70%, 0 100%);
-  clip-path: polygon(0 0, 3000px 0, 3000px 70%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 3000px 70%, 3000px 70%, 0 100%);
+  clip-path: polygon(0 0, 3000px 70%, 3000px 70%, 0 100%);
 }
 
 .about {
   width: 90%;
   margin: 0 auto;
+}
+
+div.footer {
+  margin-bottom: 200px;
+  height: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__cta {
+  position: absolute;
+  font-size: 40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
 }
