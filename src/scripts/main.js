@@ -214,3 +214,24 @@ var headText = new WordShuffler(headline,{
 });
 
 headText.restart();
+
+
+
+{
+  let lastPosition = 0;
+  let ticking = false;
+  let navMenu = document.getElementById('main-nav');
+
+  function shrinkMenu() {
+    lastPosition = window.scrollY;
+    if(lastPosition > 500) {
+      navMenu.classList.add('shrink');
+    } else if(lastPosition < 400) {
+      navMenu.classList.remove('shrink');
+    }
+  }
+  setInterval(() => {
+    document.addEventListener('scroll', shrinkMenu);
+  }, 500);
+
+}

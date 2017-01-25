@@ -240,6 +240,45 @@ template {
   display: none;
 }
 
+a[class^='underline'] {
+  padding-bottom: .05em;
+  text-decoration: none;
+  padding-left: .125em;
+  padding-right: .125em;
+  position: relative;
+}
+
+a[class^='underline']::after {
+  border-bottom: 0.125em solid #3498db;
+  content: '';
+  position: absolute;
+  top: 100%;
+  transition: .35s;
+}
+
+a[class^='underline']:hover::after {
+  transition: all 0.35s;
+}
+
+a.underline_from_center::after {
+  right: 50%;
+  left: 50%;
+}
+
+a.underline_from_center:hover::after {
+  right: 0;
+  left: 0;
+}
+
+nav.shrink .brand {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+nav.shrink .nav-items {
+  margin: .75em;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Raleway";
@@ -302,6 +341,7 @@ p:first-letter {
 
 .brand {
   float: left;
+  transition: all 1.5s ease-in;
   margin: 1em 0;
   padding: 0 10px;
 }
@@ -318,6 +358,7 @@ p:first-letter {
 
 .nav-items {
   float: right;
+  transition: all 1.5s ease-in;
   margin: 2.2em 0;
   padding: 0 6px;
 }
@@ -427,34 +468,4 @@ div.projects {
 .about {
   width: 90%;
   margin: 0 auto;
-}
-
-a[class^='underline'] {
-  padding-bottom: .05em;
-  text-decoration: none;
-  padding-left: .125em;
-  padding-right: .125em;
-  position: relative;
-}
-
-a[class^='underline']::after {
-  border-bottom: 0.125em solid #3498db;
-  content: '';
-  position: absolute;
-  top: 100%;
-  transition: .35s;
-}
-
-a[class^='underline']:hover::after {
-  transition: all 0.35s;
-}
-
-a.underline_from_center::after {
-  right: 50%;
-  left: 50%;
-}
-
-a.underline_from_center:hover::after {
-  right: 0;
-  left: 0;
 }

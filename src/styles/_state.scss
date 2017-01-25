@@ -39,3 +39,16 @@ a.underline_from_center:hover::after {
   right: 0;
   left: 0;
 }
+
+nav.shrink {
+
+  .brand {
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+
+  .nav-items {
+    margin: .75em;
+  }
+
+}
