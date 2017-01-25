@@ -275,11 +275,28 @@ li {
   list-style: none;
 }
 
+p:first-letter {
+  font-size: 9rem;
+  line-height: 1;
+  padding-bottom: -5px;
+  padding-left: 3px;
+}
+
+.letter {
+  font-size: 80px;
+}
+
+.about p {
+  font-size: 2.5em;
+  line-height: 1.5;
+}
+
 #main-nav {
   position: fixed;
   width: 100%;
   background: #fff;
   top: 0;
+  z-index: 1;
   border-bottom: 3px solid lime;
 }
 
@@ -350,6 +367,7 @@ div.projects {
   width: 90%;
   margin: 0 auto;
   margin-top: 15em;
+  margin-bottom: 10rem;
 }
 
 .row {
@@ -359,6 +377,13 @@ div.projects {
   flex-direction: row;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .row {
+    display: block;
+  }
 }
 
 .project-tile {
@@ -374,10 +399,11 @@ div.projects {
   justify-content: center;
 }
 
-.project-tile span.letter {
-  font-size: 10rem;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+@media (min-width: 360px) and (max-width: 480px) {
+  .project-tile {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: 360px) and (max-width: 480px) {
@@ -388,8 +414,19 @@ div.projects {
   }
 }
 
-.avatar {
-  border-radius: 1%;
+.about__container {
+  width: 100%;
+  background: lime;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 200px;
+  -webkit-clip-path: polygon(0 0, 3000px 0, 3000px 70%, 0 100%);
+  clip-path: polygon(0 0, 3000px 0, 3000px 70%, 0 100%);
+}
+
+.about {
+  width: 90%;
+  margin: 0 auto;
 }
 
 a[class^='underline'] {
