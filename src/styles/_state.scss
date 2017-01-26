@@ -12,19 +12,19 @@ They are also about describing how a module might look in different views like t
 
 
 a[class^='underline'] {
+  padding-bottom: .05em;
   text-decoration: none;
-  padding-left: 0.125em;
-  padding-right: 0.125em;
-  padding-bottom: 0.05em;
+  padding-left: .125em;
+  padding-right: .125em;
   position: relative;
 }
 
 a[class^='underline']::after {
+  border-bottom: 0.125em solid #3498db;
   content: '';
   position: absolute;
   top: 100%;
-  border-bottom: 0.125em solid #3498db;
-  transition: all 0.35s;
+  transition: .35s;
 }
 
 a[class^='underline']:hover::after {
@@ -38,4 +38,78 @@ a.underline_from_center::after {
 a.underline_from_center:hover::after {
   right: 0;
   left: 0;
+}
+
+.circle {
+  width: 400px;
+  margin: 0 auto;
+  animation-duration: 4s;
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  animation: 4s infinite-spinning infinite;
+  animation-timing-function: linear;
+
+}
+
+[class^='side'] {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+[class$='1'] {
+  border-radius: 100% 0 0 0;
+  border: 1px solid #0f0;
+  border-right: none;
+  border-bottom: none;
+}
+
+[class$='2'] {
+  border-radius: 0 100% 0 0;
+  border: 1px solid grey;
+  border-bottom: none;
+  border-left: none;
+}
+
+[class$='3'] {
+  border-radius: 0 0 0 100%;
+  border: 1px solid grey;
+  border-top: none;
+  border-right: none;
+}
+
+[class$='4'] {
+  border-radius: 0 0 100% 0;
+  border: 1px solid #0f0;
+  border-top: none;
+  border-left: none;
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+
+  }
+}
+
+nav.shrink {
+
+  .brand {
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+
+  .nav-items {
+    margin: .75em;
+  }
+
 }

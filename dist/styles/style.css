@@ -240,6 +240,104 @@ template {
   display: none;
 }
 
+a[class^='underline'] {
+  padding-bottom: .05em;
+  text-decoration: none;
+  padding-left: .125em;
+  padding-right: .125em;
+  position: relative;
+}
+
+a[class^='underline']::after {
+  border-bottom: 0.125em solid #3498db;
+  content: '';
+  position: absolute;
+  top: 100%;
+  transition: .35s;
+}
+
+a[class^='underline']:hover::after {
+  transition: all 0.35s;
+}
+
+a.underline_from_center::after {
+  right: 50%;
+  left: 50%;
+}
+
+a.underline_from_center:hover::after {
+  right: 0;
+  left: 0;
+}
+
+.circle {
+  width: 400px;
+  margin: 0 auto;
+  animation-duration: 4s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  animation: 4s infinite-spinning infinite;
+  animation-timing-function: linear;
+}
+
+[class^='side'] {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+[class$='1'] {
+  border-radius: 100% 0 0 0;
+  border: 1px solid #0f0;
+  border-right: none;
+  border-bottom: none;
+}
+
+[class$='2'] {
+  border-radius: 0 100% 0 0;
+  border: 1px solid grey;
+  border-bottom: none;
+  border-left: none;
+}
+
+[class$='3'] {
+  border-radius: 0 0 0 100%;
+  border: 1px solid grey;
+  border-top: none;
+  border-right: none;
+}
+
+[class$='4'] {
+  border-radius: 0 0 100% 0;
+  border: 1px solid #0f0;
+  border-top: none;
+  border-left: none;
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  to {
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+nav.shrink .brand {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+nav.shrink .nav-items {
+  margin: .75em;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Raleway";
@@ -275,15 +373,34 @@ li {
   list-style: none;
 }
 
+p:first-letter {
+  font-size: 9rem;
+  line-height: 1;
+  padding-bottom: -5px;
+  padding-left: 3px;
+}
+
+.letter {
+  font-size: 80px;
+}
+
+.about p {
+  font-size: 2.5em;
+  line-height: 1.5;
+}
+
 #main-nav {
   position: fixed;
   width: 100%;
+  background: #fff;
   top: 0;
-  border-bottom: 3px solid #0f0;
+  z-index: 1;
+  border-bottom: 3px solid lime;
 }
 
 .brand {
   float: left;
+  transition: all 1.5s ease-in;
   margin: 1em 0;
   padding: 0 10px;
 }
@@ -300,6 +417,7 @@ li {
 
 .nav-items {
   float: right;
+  transition: all 1.5s ease-in;
   margin: 2.2em 0;
   padding: 0 6px;
 }
@@ -344,6 +462,50 @@ li {
   font-size: 45px;
 }
 
+div.projects {
+  margin-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15em;
+  margin-bottom: 10rem;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .row {
+    display: block;
+  }
+}
+
+.project-tile {
+  width: calc(33% - 5px);
+  text-align: center;
+  background: lime;
+  height: 20rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .project-tile {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 @media (min-width: 360px) and (max-width: 480px) {
   #hero {
     display: block;
@@ -352,36 +514,38 @@ li {
   }
 }
 
-.avatar {
-  border-radius: 1%;
+.about__container {
+  width: 100%;
+  background: lime;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 200px;
+  -webkit-clip-path: polygon(0 0, 3000px 70%, 3000px 70%, 0 100%);
+  clip-path: polygon(0 0, 3000px 70%, 3000px 70%, 0 100%);
 }
 
-a[class^='underline'] {
-  text-decoration: none;
-  padding-left: 0.125em;
-  padding-right: 0.125em;
-  padding-bottom: 0.05em;
-  position: relative;
+.about {
+  width: 90%;
+  margin: 0 auto;
 }
 
-a[class^='underline']::after {
-  content: '';
+div.footer {
+  margin-bottom: 200px;
+  height: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__cta {
   position: absolute;
-  top: 100%;
-  border-bottom: 0.125em solid #3498db;
-  transition: all 0.35s;
-}
-
-a[class^='underline']:hover::after {
-  transition: all 0.35s;
-}
-
-a.underline_from_center::after {
-  right: 50%;
-  left: 50%;
-}
-
-a.underline_from_center:hover::after {
-  right: 0;
+  font-size: 40px;
   left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
 }

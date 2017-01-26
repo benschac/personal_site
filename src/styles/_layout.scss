@@ -14,13 +14,16 @@ Layouts hold one or more modules together.
 #main-nav {
   position: fixed;
   width: 100%;
+  background: $navigation-background;
   top: 0;
-  border-bottom: 3px solid #0f0;
+  z-index: 1;
+  border-bottom: 3px solid $navigation-border;
 }
 
 
 .brand {
   float: left;
+  transition: all 1.5s ease-in;
   margin: 1em 0;
   padding: 0 10px;
 }
@@ -37,6 +40,7 @@ Layouts hold one or more modules together.
 
 .nav-items {
   float: right;
+  transition: all 1.5s ease-in;
   margin: 2.2em 0;
   padding: 0 6px;
 }
@@ -70,7 +74,6 @@ Layouts hold one or more modules together.
 }
 
 #hero {
-
   margin-top: 300px;
   text-align: center;
 
@@ -84,6 +87,45 @@ Layouts hold one or more modules together.
   }
 }
 
+div.projects {
+  margin-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15em;
+  margin-bottom: 10rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .row {
+    display: block;
+  }
+}
+
+.project-tile {
+  width: calc(33% - 5px);
+  text-align: center;
+  background: $navigation-border;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .project-tile {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 
 
 @media (min-width: 360px) and (max-width: 480px) {
@@ -94,6 +136,36 @@ Layouts hold one or more modules together.
   }
 }
 
-.avatar {
-  border-radius: 1%;
+.about__container {
+  width: 100%;
+  background: $navigation-border;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 200px;
+
+  clip-path: polygon(0 0, 3000px 70%, 3000px 70%, 0 100%);
+}
+
+.about {
+  width: 90%;
+  margin: 0 auto;
+}
+
+div.footer {
+  margin-bottom: 200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__cta {
+  position: absolute;
+  font-size: 40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+
 }

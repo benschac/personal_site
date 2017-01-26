@@ -38,3 +38,22 @@ ______________________________________________________
 li {
   list-style: none;
 }
+
+// Branding Projects Text
+
+p:first-letter {
+  font-size: 9rem;
+  line-height: 1;
+  padding-bottom: -5px;
+  padding-left: 3px;
+}
+
+.letter {
+  font-size: 80px;
+}
+
+.about p {
+  // margin-left: -50px;
+  font-size: 2.5em;
+  line-height: 1.5;
+}
