@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <style media="screen">
+    /* Mixins */
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-size: 16px;
+        font-family: helvetica;
+        }
+
+        h1 {
+        margin-top: 17px;
+        font-size: 3.5em;
+        line-height: 1.5;
+        text-align: center;
+        font-weight: 800;
+        }
+
+        .container {
+        width: 500px;
+        margin: -200px auto;
+        }
+
+        .simon {
+        position: relative;
+        }
+
+        .console {
+        background-color: white;
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        z-index: 1000;
+        margin: auto auto;
+        position: relative;
+        top: 370px;
+        border: 20px solid black;
+        }
+
+        .tile, #green, #blue, #red, #yellow {
+        height: 250px;
+        width: 250px;
+        float: left;
+        border: 20px solid black;
+        opacity: .6;
+        }
+
+        .button-container {
+        position: absolute;
+        left: 45px;
+        text-align: center;
+        }
+
+        .count {
+        font-family: 'Orbitron';
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        margin-top: -45px;
+        padding: 15px 15px 10px 15px;
+        color: red;
+        background-color: black;
+        border-radius: 4px;
+        }
+
+        button {
+        background-color: grey;
+        border-radius: 3px;
+        color: white;
+        }
+
+        p[data-action="lose"] {
+        display: none;
+        }
+
+        .active, .lit {
+        opacity: 1 !important;
+        }
+
+        #green {
+        border-top-left-radius: 100%;
+        border-right: 5px solid black;
+        border-bottom: 5px solid black;
+        background-color: green;
+        }
+
+        #blue {
+        border-bottom-right-radius: 100%;
+        border-left: 5px solid black;
+        border-top: 5px solid black;
+        background-color: blue;
+        }
+
+        #red {
+        border-top-right-radius: 100%;
+        border-left: 5px solid black;
+        border-bottom: 5px solid black;
+        background-color: red;
+        }
+
+        #yellow {
+        border-bottom-left-radius: 100%;
+        border-right: 5px solid black;
+        border-top: 5px solid black;
+        background-color: yellow;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-board">
+         <div class="simon">
+            <div class="console">
+            <div><h1>Simon</h1></div>
+            <div class="button-container">
+              <div class="count" data-round="0">0</div>
+              <button data-action="start">start</button>
+              <button>strict</button>
+              <button>on</button>
+              <p data-action="lose">Sorry, you lost after <span data-round="0"></span>rounds!</p>
+            </div>
+
+          </div>
+
+          <div id="green" class="tile" data-tile="1"></div>
+          <div id="red" class="tile" data-tile="2"></div>
+          <div id="yellow" class="tile" data-tile="3"></div>
+          <div id="blue" class="tile" data-tile="4"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+      'use strict';
+
+      /* sound clips */
+      var sound1 = 'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3',
+        sound2 = 'https://s3.amazonaws.com/freecodecamp/simonSound2.mp3',
+        sound3 = 'https://s3.amazonaws.com/freecodecamp/simonSound3.mp3',
+        sound4 = 'https://s3.amazonaws.com/freecodecamp/simonSound4.mp3';
+
+
+      var Simon = {
+
+      // sequence: [],
+      // copy: [],
+      active: true,
+      /* To-Do: Add change modes */
+      mode: 'normal',
+
+      init: function() {
+        var _this = this;
+        $('[data-action=start]').on('click', function() {
+          /* Trigger Start Game funtion */
+          _this.startGame();
+        });
+
+      },
+
+      startGame: function() {
+        this.sequence = [];
+        this.copy = [];
+        this.round = 0;
+        this.active = true;
+        $('p[data-action="lose"]').hide();
+        this.newRound();
+      },
+
+      newRound: function() {
+        $('[data-round]').text(++this.round);
+        this.sequence.push(this.randomNumber());
+        this.copy = this.sequence.slice(0);
+        this.animate(this.sequence);
+      },
+
+      registerClick: function(event) {
+        var desiredResponse = this.copy.shift();
+        var actualResponse = $(event.target).data('tile');
+        this.active = (desiredResponse === actualResponse);
+        this.checkLose();
+      },
+
+      checkLose: function() {
+        if(this.copy.length === 0 && this.active) {
+          this.deactiveateSimonBoard();
+          this.newRound();
+        } else if(!this.active) {
+          this.deactiveateSimonBoard();
+          this.endGame();
+        }
+      },
+
+      endGame: function() {
+        $('p[data-action=lose]').show();
+        $($('[data-round]').get(0)).text('0');
+      },
+
+      activateSimonBoard: function() {
+        var _this = this;
+
+        $('.simon')
+        .on('click', '[data-tile]', function(e) {
+          _this.registerClick(e);
+        })
+        .on('mousedown', '[data-tile]', function() {
+          $(this).addClass('active');
+          _this.playSound($(this).data('tile'));
+        })
+        .on('mouseup', '[data-tile]', function() {
+          $(this).removeClass('active');
+        });
+      },
+
+      deactiveateSimonBoard: function() {
+        $('.simon').off('click', '[data-tile]')
+                   .off('mousedown', '[data-tile]')
+                   .off('mouseup', '[data-tile]');
+
+        $('[data-tile]').removeClass('hoverable');
+      },
+
+      animate: function(sequence) {
+        var x = 0;
+        var speed = 600;
+        var _this = this;
+
+        if(this.round > 6) {
+          speed = 400;
+        }
+
+        var interval = setInterval(function() {
+          _this.playSound(sequence[x]);
+          _this.lightUp(sequence[x]);
+
+          x++;
+
+          if(x >= sequence.length) {
+            clearInterval(interval);
+            _this.activateSimonBoard();
+          }
+        }, speed);
+
+
+      },
+      lightUp: function(tile) {
+        var $tile = $('[data-tile=' + tile + ']').addClass('lit');
+        window.setTimeout(function() {
+          $tile.removeClass('lit');
+        }, 300);
+
+      },
+      playSound: function(tile) {
+        var sound = $('<audio autoplay></audio>');
+        sound.append('<source src="' + 'https://s3.amazonaws.com/freecodecamp/simonSound' + tile + '.mp3"> type="audio/mp3 />');
+        $('[data-action=sound]').html(sound);
+      },
+
+      randomNumber: function() {
+        return Math.floor((Math.random() * 4) + 1);
+      }
+
+      }
+
+      return Simon.init();
+      });
+
+
+    </script>
+  </body>
+</html>
