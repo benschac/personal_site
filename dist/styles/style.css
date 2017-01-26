@@ -398,9 +398,15 @@ p:first-letter {
   border-bottom: 3px solid lime;
 }
 
+@media (min-width: 360px) and (max-width: 480px) {
+  #main-nav {
+    text-align: center;
+    font-size: .75em;
+  }
+}
+
 .brand {
   float: left;
-  transition: all 1.5s ease-in;
   margin: 1em 0;
   padding: 0 10px;
 }
@@ -417,7 +423,6 @@ p:first-letter {
 
 .nav-items {
   float: right;
-  transition: all 1.5s ease-in;
   margin: 2.2em 0;
   padding: 0 6px;
 }
