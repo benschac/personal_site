@@ -1,0 +1,41 @@
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 150px;
+  justify-content: center;
+}
+
+.hero-image {
+
+  img {
+    height: auto;
+  }
+}
+
+.description {
+
+  width: 50%;
+  padding: 0 50px 0;
+
+  h3, h5 {
+    text-align: center;
+  }
+  h3 {
+    margin-top: 0;
+  }
+
+  justify-content: center;
+}
+
+.button-container {
+  text-align: center;
+}
+
+a button .fa-github:hover {
+    color: $navigation-border;
+    transition: transform: rotate(180deg);
+
+    text-shadow: 1px 1px 1px #ccc;
+}

@@ -373,7 +373,7 @@ li {
   list-style: none;
 }
 
-p:first-letter {
+p:first-letter.first {
   font-size: 9rem;
   line-height: 1;
   padding-bottom: -5px;
@@ -553,4 +553,46 @@ div.footer {
   margin-left: auto;
   margin-right: auto;
   z-index: 5;
+}
+
+main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 150px;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  height: auto;
+}
+
+.description {
+  width: 50%;
+  padding: 0 50px 0;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.description h3,
+.description h5 {
+  text-align: center;
+}
+
+.description h3 {
+  margin-top: 0;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.fa-github:hover {
+  color: lime;
+  transition: transform 1s;
+  text-shadow: 1px 1px 1px #ccc;
 }
