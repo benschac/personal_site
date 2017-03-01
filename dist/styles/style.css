@@ -562,7 +562,7 @@ main {
   flex-flow: row nowrap;
   margin-left: 50px;
   margin-right: 50px;
-  margin-top: 150px;
+  margin-top: 250px;
   -ms-flex-pack: center;
   justify-content: center;
 }
@@ -591,8 +591,11 @@ main {
   text-align: center;
 }
 
-.fa-github:hover {
+button [class^="fa"] {
+  transition: color .5s;
+}
+
+button [class^="fa"]:hover {
   color: lime;
-  transition: transform 1s;
   text-shadow: 1px 1px 1px #ccc;
 }
