@@ -3,7 +3,7 @@ main {
   flex-flow: row nowrap;
   margin-left: 50px;
   margin-right: 50px;
-  margin-top: 250px;
+  margin-top: 100px;
   justify-content: center;
 }
 
@@ -41,4 +41,15 @@ button [class^="fa"] {
 
       text-shadow: 1px 1px 1px #ccc;
   }
+}
+
+aside {
+  & h5 {
+    margin-top: 0;
+  }
+}
+
+.project-header {
+  margin-top: 150px;
+  text-align: center;
 }
