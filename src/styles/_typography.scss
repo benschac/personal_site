@@ -41,12 +41,7 @@ li {
 
 // Branding Projects Text
 
-p:first-letter.first {
-  font-size: 9rem;
-  line-height: 1;
-  padding-bottom: -5px;
-  padding-left: 3px;
-}
+
 
 .letter {
   font-size: 80px;
@@ -56,4 +51,12 @@ p:first-letter.first {
   // margin-left: -50px;
   font-size: 2.5em;
   line-height: 1.5;
+}
+
+.about p:first-letter {
+  font-size: 9rem;
+  line-height: 1;
+  padding-bottom: -5px;
+  padding-left: 3px;
+  
 }
