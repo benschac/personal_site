@@ -2,24 +2,10 @@
   "name": "personal_site",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
   "repository": "https://github.com/benschac/personal_site.git",
   "author": "Bejamin Schachter <benschac@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "babel-node src",
-    "test": "eslint src"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.23.0",
-    "babel-eslint": "^7.1.1",
-    "babel-preset-env": "^1.2.1",
-    "babel-preset-flow": "^6.23.0",
-    "eslint": "^3.17.1",
-    "eslint-config-airbnb": "latest",
-    "eslint-plugin-flowtype": "^2.30.3",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
-    "eslint-plugin-react": "^6.9.0",
-    "flow-bin": "^0.41.0"
-  }
+  "license": "MIT"
 }
