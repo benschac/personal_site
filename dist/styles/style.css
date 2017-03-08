@@ -373,13 +373,6 @@ li {
   list-style: none;
 }
 
-p:first-letter {
-  font-size: 9rem;
-  line-height: 1;
-  padding-bottom: -5px;
-  padding-left: 3px;
-}
-
 .letter {
   font-size: 80px;
 }
@@ -387,6 +380,13 @@ p:first-letter {
 .about p {
   font-size: 2.5em;
   line-height: 1.5;
+}
+
+.about p:first-letter {
+  font-size: 9rem;
+  line-height: 1;
+  padding-bottom: -5px;
+  padding-left: 3px;
 }
 
 #main-nav {
@@ -553,4 +553,62 @@ div.footer {
   margin-left: auto;
   margin-right: auto;
   z-index: 5;
+}
+
+main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 100px;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  height: auto;
+}
+
+.description {
+  width: 50%;
+  padding: 0 50px 0;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.description h3,
+.description h5 {
+  text-align: center;
+}
+
+.description h3 {
+  margin-top: 0;
+}
+
+.button-container {
+  text-align: center;
+}
+
+button [class^="fa"] {
+  transition: color .5s;
+}
+
+button [class^="fa"]:hover {
+  color: lime;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+aside h5 {
+  margin-top: 0;
+}
+
+.project-header {
+  margin-top: 150px;
+  text-align: center;
+}
+
+iframe {
+  border: none;
 }

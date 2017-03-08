@@ -12,6 +12,8 @@
 
         body {
         font-size: 16px;
+        margin: 0;
+        padding: 0;
         font-family: helvetica;
         }
 
@@ -25,7 +27,7 @@
 
         .container {
         width: 500px;
-        margin: -200px auto;
+        margin: -250px auto;
         }
 
         .simon {
@@ -56,6 +58,10 @@
         position: absolute;
         left: 45px;
         text-align: center;
+        }
+
+        .button-container p {
+          margin: 0;
         }
 
         .count {
@@ -124,7 +130,7 @@
               <button data-action="start">start</button>
               <button>strict</button>
               <button>on</button>
-              <p data-action="lose">Sorry, you lost after <span data-round="0"></span>rounds!</p>
+              <p data-action="lose">Sorry, you lost!</p>
             </div>
 
           </div>
