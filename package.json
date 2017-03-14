@@ -3,19 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "start": "babel-node src",
-  "test": "eslint src"
+    "start": "babel-node src",
+    "test": "eslint src && jest --coverage",
+  "precommit": "yarn test",
+  "prepush": "yarn test"
   },
   "repository": "https://github.com/benschac/personal_site.git",
   "author": "Bejamin Schachter <benschac@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.23.0",
+    "babel-jest": "^19.0.0",
     "babel-preset-env": "^1.2.1",
     "eslint": "^3.17.1",
     "eslint-config-airbnb": "latest",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-react": "^6.9.0",
+    "husky": "^0.13.2",
+    "jest": "^19.0.2"
   }
 }
