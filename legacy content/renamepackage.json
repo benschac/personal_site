@@ -1,0 +1,32 @@
+{
+  "name": "personal_site",
+  "version": "1.0.0",
+  "description": "",
+  "sasslintConfig": "./.sass-lint.yml",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benschac/personal_site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benschac/personal_site/issues"
+  },
+  "homepage": "https://github.com/benschac/personal_site#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-strip-comments": "^2.4.3",
+    "sass-lint": "^1.10.2"
+  }
+}
