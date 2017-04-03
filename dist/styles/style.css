@@ -567,12 +567,17 @@ main {
   justify-content: center;
 }
 
+.hero-image {
+  width: 90%;
+}
+
 .hero-image img {
+  width: 100%;
   height: auto;
 }
 
 .description {
-  width: 50%;
+  width: 100%;
   padding: 0 50px 0;
   -ms-flex-pack: center;
   justify-content: center;
@@ -611,4 +616,31 @@ aside h5 {
 
 iframe {
   border: none;
+}
+
+@media (max-width: 800px) {
+  main {
+    display: block;
+  }
+
+  .hero-image {
+    display: block;
+    margin: 0 auto 0 auto;
+  }
+
+  .hero-image img {
+    height: auto;
+  }
+
+  .description {
+    padding: 0;
+  }
+
+  aside {
+    display: block;
+  }
+
+  .project-header {
+    margin-top: 236px;
+  }
 }

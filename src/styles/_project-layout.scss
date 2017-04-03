@@ -8,15 +8,16 @@ main {
 }
 
 .hero-image {
-
+  width: 90%;
   img {
+    width: 100%;
     height: auto;
   }
 }
 
 .description {
 
-  width: 50%;
+  width: 100%;
   padding: 0 50px 0;
 
   h3, h5 {
@@ -56,4 +57,33 @@ aside {
 
 iframe {
   border: none;
+}
+
+
+@media(max-width: 800px) {
+
+    main {
+      display: block;
+    }
+
+    .hero-image {
+        display: block;
+        margin: 0 auto 0 auto;
+        img {
+          height: auto;
+        }
+    }
+
+    .description {
+      padding: 0;
+    }
+
+    aside {
+      display: block;
+    }
+
+    .project-header {
+      margin-top: 236px;
+    }
+  
 }
