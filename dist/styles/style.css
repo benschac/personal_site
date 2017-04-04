@@ -405,6 +405,18 @@ li {
   }
 }
 
+.target {
+  position: absolute;
+  border-bottom: 4px solid transparent;
+  z-index: 1;
+  transform: translateX(-30px);
+}
+
+#main-nav a,
+.target {
+  transition: all .35s ease-in-out;
+}
+
 .brand {
   float: left;
   margin: 1em 0;
