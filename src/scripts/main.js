@@ -237,40 +237,40 @@ headText.restart();
 }
 
 
-const target = document.querySelector('.target');
-const links = [...document.querySelectorAll('#main-nav a')];
-const colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
+// const target = document.querySelector('.target');
+// const links = [...document.querySelectorAll('#main-nav a')];
+// const colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
 
-function mouseEnterFunc() {
-  // remove active class if mouse hovers another element.
-    for (let i = 0; i < links.length; i++) {
-    if (links[i].parentNode.classList.contains("active")) {
-      links[i].parentNode.classList.remove("active");
-    }
-    links[i].style.opacity = "0.25";
-  }
+// function mouseEnterFunc() {
+//   // remove active class if mouse hovers another element.
+//     for (let i = 0; i < links.length; i++) {
+//     if (links[i].parentNode.classList.contains("active")) {
+//       links[i].parentNode.classList.remove("active");
+//     }
+//     links[i].style.opacity = "0.25";
+//   }
    
-  this.parentNode.classList.add("active");
-  this.style.opacity = "1";
+//   this.parentNode.classList.add("active");
+//   this.style.opacity = "1";
    
-  const width = this.getBoundingClientRect().width;
-  const height = this.getBoundingClientRect().height;
-  const left = this.getBoundingClientRect().left;
-  const top = this.getBoundingClientRect().top;
-  const color = colors[Math.floor(Math.random() * colors.length)];
+//   const width = this.getBoundingClientRect().width;
+//   const height = this.getBoundingClientRect().height;
+//   const left = this.getBoundingClientRect().left;
+//   const top = this.getBoundingClientRect().top;
+//   const color = colors[Math.floor(Math.random() * colors.length)];
  
-  target.style.width = `${width}px`;
-  target.style.height = `${height + 40}px`;
-  target.style.left = `${left}px`;
-  target.style.top = `${top}px`;
-  target.style.borderColor = color;
-  target.style.transform = "none";
-  console.log(target)
+//   target.style.width = `${width}px`;
+//   target.style.height = `${height + 40}px`;
+//   target.style.left = `${left}px`;
+//   target.style.top = `${top}px`;
+//   target.style.borderColor = color;
+//   target.style.transform = "none";
+//   console.log(target)
 
-}
+// }
 
-links.forEach(link => {
-  link.addEventListener('mouseenter', mouseEnterFunc);
-});
+// links.forEach(link => {
+//   link.addEventListener('mouseenter', mouseEnterFunc);
+// });
 
 
