@@ -36,7 +36,14 @@
     <!--  Start header-->
     <div class="l-container" id="hero">
       <h1>Hi, I'm Benjamin Schachter.</h1>
-      <h2>I'm a front-end developer at <a href="http://www.rundexter.com">Dexter</a></h2>
+      <h2>I'm a front-end developer</h2>
+      <h2>I make chatbots too 💪</h2>
+      <div class="fb-messengermessageus" 
+          messenger_app_id="1714132622213999" 
+          page_id="464779437253902"
+          color="blue"
+          size="xlarge">
+        </div>
     </div>
 
     <div class="projects">
@@ -98,6 +105,24 @@
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     <script type="text/javascript" src="src/scripts/main.js">
+    </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '1714132622213999',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v3.1'
+        });
+      };
+    
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
     </script>
   </body>
 </html>
