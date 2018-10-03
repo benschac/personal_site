@@ -1,5 +1,10 @@
 import {render} from "react-dom";
 import React from "react";
 
+import Root from './components/Root';
 
-render(<div>Hello World</div>, document.getElementById("app"));
+/** entry point for the react application */
+render(
+  <Root />,
+  document.getElementById("app")
+);
