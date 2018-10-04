@@ -1,4 +1,5 @@
 import React from "react";
+import Navigation from "../Navigation";
 import "./index.css";
 
 /**
@@ -9,6 +10,7 @@ import "./index.css";
 function Root() {
 	return (
 		<div>
+			<Navigation />
       the root compomentn
 		</div>
 	);
