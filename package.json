@@ -1,11 +1,12 @@
 {
   "name": "personal_site",
   "version": "1.0.0",
-  "description": "",
-  "sasslintConfig": "./.sass-lint.yml",
-  "main": "gulpfile.js",
+  "description": "New Personal Site",
+  "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "dev": "webpack --watch",
+    "start:dev": "webpack-dev-server",
+    "lint:fix": "./node_modules/.bin/eslint src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,14 +20,33 @@
   },
   "homepage": "https://github.com/benschac/personal_site#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.5",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^1.9.1",
-    "gulp-strip-comments": "^2.4.3",
-    "sass-lint": "^1.10.2"
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.4",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.6.1",
+    "eslint-plugin-react": "^7.11.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "^15.6.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "browserslist": "^4.1.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0"
   }
 }
