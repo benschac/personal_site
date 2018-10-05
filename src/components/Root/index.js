@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../Navigation";
+import App from "../App";
 import "./index.css";
 
 /**
@@ -11,7 +12,7 @@ function Root() {
 	return (
 		<div>
 			<Navigation />
-      the root compomentn
+			<App />
 		</div>
 	);
 }
