@@ -1,19 +1,43 @@
 import React from "react";
-import {createStore} from "redux";
-import {Provider} from "react-redux";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import history from "../../utils/history";
-import Index from "../../pages/Index";
-import About from "../../pages/About";
+import Tile from "../Tile";
+import topics from "./meta";
+import classnames from "./index.css";
 /**
  * @class App
  */
-function App() {
-	return (
-		<div>
+class App extends React.Component {
+	state = {
+		selected: null
+	}
 
-		</div>
-	);
+	onClick = (tile) => {
+		this.setState({
+			selected: tile
+		})
+		console.log(tile, this.state.selected);
+	}
+
+	/** @inheritdoc */
+	render() {
+		return (
+			<main>
+				{
+					topics.map(topic => {
+						const classname = classnames[topic.classnames];
+						return (
+							<Tile
+								key={topic.classnames}
+								header={topic.header}
+								fontSize={topic.fontSize}
+								classnames={`${classname} ${classname === this.state.selected ? ' selected' : ''}`}
+								onClick={this.onClick}
+							/>
+						);
+					})
+				}
+			</main>
+		);
+	}
 }
 
 export default App;

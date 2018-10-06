@@ -1,0 +1,26 @@
+
+/* 
+===============================================
+
+            Document Wide Defaults
+
+===============================================
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background: #dfe6e9;
+  height: 100vh;
+  font-size: 16px;
+  padding: 0;
+  font-family: 'Merriweather', sans-serif;
+}
