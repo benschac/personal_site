@@ -1,5 +1,6 @@
-import React from "react";
+import React, {Fragment} from "react";
 import PropTypes from "prop-types";
+
 
 Tile.propTypes = {
 	/** the classnames */
@@ -7,7 +8,11 @@ Tile.propTypes = {
 	/** FontSize */
 	fontSize: PropTypes.string,
 	/** The header in the tile */
-	header: PropTypes.string
+	header: PropTypes.string,
+	/** onClick the click handler */
+	onCLick: PropTypes.func.isRequired,
+	/** selected */
+	selected: PropTypes.bool.isRequired
 };
 
 Tile.defaultProps = {
@@ -19,13 +24,22 @@ Tile.defaultProps = {
  * 
  * @class Tile
  */
-function Tile({classnames, header, fontSize, onClick}) {
+function Tile({
+	classnames,
+	header,
+	fontSize,
+	onClick,
+	selected,
+	content,
+	children
+}) {
 	return (
 		<article
 			className={`${classnames} justify-center items-center flex clickable`}
 			onClick={onClick.bind(null, classnames)}
 		>
-			<h1 className={fontSize}>{header}</h1>
+			<h1 className={selected ? "h1" : fontSize}>{header}</h1>
+			{children}
 		</article>
 	);
 }

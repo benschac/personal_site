@@ -43,6 +43,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
+    "@fortawesome/free-solid-svg-icons": "^5.3.1",
+    "@fortawesome/react-fontawesome": "^0.1.3",
     "basscss": "^8.0.10",
     "browserslist": "^4.1.2",
     "history": "^4.7.2",

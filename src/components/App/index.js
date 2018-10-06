@@ -1,6 +1,7 @@
 import React from "react";
 import Tile from "../Tile";
 import topics from "./meta";
+import Layout from "../../layout";
 import classnames from "./index.css";
 /**
  * @class App
@@ -34,7 +35,15 @@ class App extends React.Component {
 										: ''}`
 								}
 								onClick={this.onClick}
-							/>
+								selected={classname === this.state.selected}
+								content={topic.content}
+							>
+							{
+								classname === this.state.selected
+									? <Layout content={topic.content} type={topic.type}/>
+									: null
+							}
+							</Tile>
 						);
 					})
 				}
