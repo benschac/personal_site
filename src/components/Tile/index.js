@@ -22,7 +22,7 @@ Tile.defaultProps = {
 function Tile({classnames, header, fontSize, onClick}) {
 	return (
 		<article
-			className={`${classnames} justify-center items-center flex`}
+			className={`${classnames} justify-center items-center flex clickable`}
 			onClick={onClick.bind(null, classnames)}
 		>
 			<h1 className={fontSize}>{header}</h1>

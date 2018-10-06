@@ -12,9 +12,8 @@ class App extends React.Component {
 
 	onClick = (tile) => {
 		this.setState({
-			selected: tile
+			selected: tile === this.state.tile ? null : tile
 		})
-		console.log(tile, this.state.selected);
 	}
 
 	/** @inheritdoc */
@@ -29,7 +28,11 @@ class App extends React.Component {
 								key={topic.classnames}
 								header={topic.header}
 								fontSize={topic.fontSize}
-								classnames={`${classname} ${classname === this.state.selected ? ' selected' : ''}`}
+								classnames={`${classname}${
+									classname === this.state.selected 
+										? ` ${classnames['selected']}` 
+										: ''}`
+								}
 								onClick={this.onClick}
 							/>
 						);

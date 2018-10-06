@@ -11,8 +11,11 @@ main {
 
 .selected {
   z-index: 10;
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  width: 95vw;
+  height: 95vh;
+  transform: rotate(0turn) !important;
+  writing-mode: horizontal-tb !important;
 }
 
 main > article {
@@ -54,7 +57,8 @@ main > article {
 }
 
 .newyears {
-  background: #fd79a8;
+  background: #636e72;
+  color: #dfe6e9;
   grid-column: 3 / span 2;
   grid-row: 4 / span 1;
 }
@@ -68,6 +72,7 @@ main > article {
 
 .meaning {
   background: rebeccapurple;
+  color: #dfe6e9;
   grid-column: 10 / span 6;
   grid-row: 1 / span 1;
 }
@@ -79,7 +84,7 @@ main > article {
 }
 
 .fun {
-  background: #636e72;
+  background: #fd79a8;
   color: #dfe6e9;
   grid-column: 8 / span 9;
   grid-row: 5 / span 1;

@@ -24,3 +24,7 @@ body {
   padding: 0;
   font-family: 'Merriweather', sans-serif;
 }
+
+.clickable {
+  cursor: pointer;
+}
