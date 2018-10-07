@@ -38,8 +38,11 @@ function Tile({
 			className={`${classnames} justify-center items-center flex clickable`}
 			onClick={onClick.bind(null, classnames)}
 		>
-			<h1 className={selected ? "h1" : fontSize}>{header}</h1>
-			{children}
+			{
+				selected
+					? children
+					: <h1 className={fontSize}>{header}</h1>
+			}
 		</article>
 	);
 }

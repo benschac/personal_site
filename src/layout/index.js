@@ -5,12 +5,16 @@ import List from "./List";
 /**
  * @class Layout
  */
-function Layout({type, content}) {
+function Layout({
+	type,
+	content,
+	header
+}) {
 	switch(type) {
 	case "fourpanel":
-		return <FourPanel content={content} />;
+		return <FourPanel content={content} header={header}/>;
 	default:
-		return <List content={content}/>;
+		return <List content={content} header={header}/>;
 	}
 }
 

@@ -11,7 +11,9 @@ class App extends React.Component {
 		selected: null
 	}
 
-	onClick = (tile) => {
+	onClick = (tile, e) => {
+		console.log(e.target.className, e.target.className.split(' '));
+		// if ()
 		this.setState({
 			selected: tile === this.state.tile ? null : tile
 		})
@@ -34,15 +36,13 @@ class App extends React.Component {
 										? ` ${classnames['selected']}` 
 										: ''}`
 								}
-								onClick={this.onClick}
 								selected={classname === this.state.selected}
-								content={topic.content}
-							>
-							{
-								classname === this.state.selected
-									? <Layout content={topic.content} type={topic.type}/>
-									: null
-							}
+								onClick={this.onClick}
+							>						
+								<Layout 
+										{...topic}
+										selected={true}
+									/>
 							</Tile>
 						);
 					})
