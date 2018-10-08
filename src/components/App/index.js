@@ -11,9 +11,7 @@ class App extends React.Component {
 		selected: null
 	}
 
-	onClick = (tile, e) => {
-		console.log(e.target.className, e.target.className.split(' '));
-		// if ()
+	onClick = (tile) => {
 		this.setState({
 			selected: tile === this.state.tile ? null : tile
 		})

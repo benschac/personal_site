@@ -20,7 +20,27 @@ export default [
 		content: [
 			{
 				title: "work",
-				icon: <FontAwesomeIcon icon={faCode} size="2x"/>
+				icon: <FontAwesomeIcon icon={faCode} size="2x"/>,
+				type: "twopanel",
+				left: {
+					header: "Dexter",
+					list: [
+						"platforms configuration panel",
+						"first-time user tutorial",
+						"refactor: ES6, CSS Modules, Redux and React 16",
+						"bug fixes",
+						"updated command center UI",
+						"generic components to repurpose",
+						"collaborate with backend-end, product + design"
+					]
+				},
+				right: {
+					header: "Rose Digital",
+					list: [
+						<a key="roar" href="https://hearmyroarnow.org/">hear me roar</a>,
+
+					]
+				}
 			},
 			{
 				title: "tooling",

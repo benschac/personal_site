@@ -19,8 +19,11 @@
   justify-content: center;
 }
 
-.close {
-  position: fixed;
-  right: 20px;
-  top: 20px;
+.select {
+  width: 80vw;
+  height: 50vh;
+  grid-row: 2 / span 4;
+  grid-column: 1 / span 4;
+  z-index: 11;
+  border: 2px solid black;
 }

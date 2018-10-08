@@ -115,6 +115,7 @@ article:hover > h1 {
 
   main > article h1 {
     opacity: 1;
+    font-size: 2.5em !important;
   }
 
   .name {
