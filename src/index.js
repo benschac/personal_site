@@ -5,6 +5,6 @@ import Root from "./components/Root";
 
 /** entry point for the react application */
 render(
-	<Root />,
-	document.getElementById("app")
+  <Root />,
+  document.getElementById("app")
 );

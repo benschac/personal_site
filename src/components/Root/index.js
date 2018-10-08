@@ -11,14 +11,14 @@ import "../../styles/index.global.css";
  * @class Root
  */
 function Root() {
-	return (
-		<Router>
-			<Fragment>
-				<Route exact path="/" component={App}/>
-				<Route path="/about" component={About} />
-			</Fragment>
-		</Router>
-	);
+  return (
+    <Router>
+      <Fragment>
+        <Route exact path="/" component={App}/>
+        <Route path="/about" component={About} />
+      </Fragment>
+    </Router>
+  );
 }
 
 export default Root;
