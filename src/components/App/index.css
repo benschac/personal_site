@@ -1,0 +1,184 @@
+main {
+  height: 95vh;
+  width: 95vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-rows: 20% 1fr 1fr 1fr 20%;
+}
+
+.selected {
+  z-index: 10;
+  position: fixed;
+  transition: height width 1s;
+  width: 95vw;
+  height: 95vh;
+  transform: rotate(0turn) !important;
+  writing-mode: horizontal-tb !important;
+}
+
+main > .tile {
+  border: 3px solid black;
+}
+
+.tile > h1 {
+  opacity: 0;
+  text-align: center;
+}
+
+.tile:hover > h1 {
+  transition: opacity .6s;
+  opacity: 1;
+}
+
+.ondemand {
+  background: #d63031;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / span 3;
+}
+
+
+.name {
+  grid-row: 2 / span 4;
+  grid-column: 1 / span 3;
+  background: #81ecec;
+  transform: rotate(.5turn);
+  writing-mode: vertical-lr;
+}
+
+.name h1 {
+  opacity: 1;
+}
+
+.frontend {
+  background: #0984e3;
+  grid-column: 4 / span 7;
+  grid-row: 1 / span 3;
+}
+
+.projectmanagement {
+  background: #ffeaa7;
+  grid-column: 6 / span 5;
+  grid-row: 4 / span 1;
+}
+
+.blogging {
+  background: #00b894;
+  grid-column: 11 / span 5;
+  grid-row: 2 / span 3;
+}
+
+.newyears {
+  background: #636e72;
+  color: #dfe6e9;
+  grid-column: 4 / span 2;
+  grid-row: 4 / span 1;
+}
+
+.sideprojects {
+  grid-row: 1 / span 4;
+  grid-column: 16 / span 1;
+  background: #fdcb6e;
+  writing-mode: vertical-rl;
+}
+
+.meaning {
+  background: rebeccapurple;
+  color: #dfe6e9;
+  grid-column: 11 / span 5;
+  grid-row: 1 / span 1;
+}
+
+.chat {
+  background: #e17055;
+  grid-column: 4 / span 4;
+  grid-row: 5 / span 1;
+}
+
+.fun {
+  background: #fd79a8;
+  color: #dfe6e9;
+  grid-column: 8 / span 9;
+  grid-row: 5 / span 1;
+}
+
+
+/* Mobile View */
+@media (max-width: 750px), screen and (max-device-width: 750px) {
+  main {
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+  }
+
+  .selected {
+    width: 95vw;
+    height: 100vh;
+  }
+
+  main > .tile h1 {
+    opacity: 1;
+    font-size: 2.5em !important;
+  }
+
+  .name {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 16;
+    writing-mode: horizontal-tb;
+    transform: rotate(0.0turn)
+  }
+
+  .frontend {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 16;
+  }
+
+  .blogging {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 16;
+  }
+
+  .projectmanagement {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 16;
+  }
+
+  .sideprojects {
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 16;
+    writing-mode: horizontal-tb;
+  }
+
+  .newyears {
+    grid-row: 6 / span 1;
+    grid-column: 1 / span 16;
+  }
+
+  .ondemand {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 16;
+  }
+
+  .fun {
+    grid-row: 7 / span 1;
+    grid-column: 1 / span 16;
+  }
+
+  .meaning {
+    grid-row: 8 / span 1;
+    grid-column: 1 / span 16;
+  }
+
+  .ondemand {
+    grid-row: 9 / span 1;
+    grid-column: 1 / span 16;
+  }
+
+  .chat {
+    grid-row: 10 / span 1;
+    grid-column: 1 / span 16;
+  }
+}

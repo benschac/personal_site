@@ -1,32 +1,18 @@
-import React, {Fragment} from "react";
-import PropTypes from "prop-types";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-import links from "./meta";
-
-Navigation.propTypes = {
-	/** the links */
-	links: PropTypes.array.isRequired
-};
-
+import React from "react";
 /**
  * @class Navigation Component
  */
-function Navigation({
-	// links
-}) {
+function Navigation() {
 	return (
-		<Fragment>
+		<nav>
 			<ul>
-				{
-					links.map(link => {
-						return (
-							<li key={link.name}>{link.name}</li>
-						);
-					})
-				}
+				<li>Benjamin Schachter</li>
+				<li>About</li>
+				<li>Resume</li>
+				<li>Developer On Demand</li>
+				<li>Contact</li>
 			</ul>
-		</Fragment>
+		</nav>
 	);
 }
 

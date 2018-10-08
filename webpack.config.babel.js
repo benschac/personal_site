@@ -1,70 +1,73 @@
-import '@babel/polyfill';
-import path from 'path';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import HtmlWebPackPlugin from 'html-webpack-plugin';
+import "@babel/polyfill";
+import path from "path";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import HtmlWebPackPlugin from "html-webpack-plugin";
 
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV !== "production";
 
 
 module.exports = {
-	entry: './src/index.js',
-	mode: 'development',
+	entry: "./src/index.js",
+	mode: "development",
 	output: {
-		filename: 'main.js',
-		path: path.resolve(__dirname, 'dist')
+		filename: "main.js",
+		path: path.resolve(__dirname, "dist") //eslint-disable-line
 	},
 	module: {
 		rules: [
-		{
-			test: /\.js$/,
-			exclude: /node_modules/,
-			use: {
-				loader: 'babel-loader',
-			}
-		},
-		{
-			test: /\.html$/,
-			use: [
-				{
-					loader: 'html-loader',
-					options: { minimize: true },
-				},
-			],
-		},
-		{
-			test: /^((?!\.global).)*\.s?[ac]ss$/,
-			use: [
-				devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-				{
-					loader: 'css-loader',
-					options:
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+				}
+			},
+			{
+				test: /\.html$/,
+				use: [
+					{
+						loader: "html-loader",
+						options: { minimize: true },
+					},
+				],
+			},
+			{
+				test: /^((?!\.global).)*\.s?[ac]ss$/,
+				use: [
+					devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+					{
+						loader: "css-loader",
+						options:
 					{
 						sourceMap: true,
 						modules: true,
-						localIdentName: '[local]___[hash:base64:5]',
+						localIdentName: "[local]___[hash:base64:5]",
 						importLoaders: 1,
 					},
-				},
-				'postcss-loader',
-			],
-		},
-		{
-			test: /\.global\.css$/,
-			use: [
-				devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-				{
-					loader: 'css-loader',
-				},
-			],
-		},
-	]
+					},
+					"postcss-loader",
+				],
+			},
+			{
+				test: /\.global\.css$/,
+				use: [
+					devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+					{
+						loader: "css-loader",
+					},
+				],
+			},
+		]
 	},
-	devtool: 'source-map',
+	devtool: "source-map",
+	devServer: {
+		historyApiFallback: true,
+	},
 	plugins: [
 		new HtmlWebPackPlugin({
-      template: './src/index.html',
-      filename: './index.html',
-    }),
+			template: "./src/index.html",
+			filename: "./index.html",
+		}),
 	]
 };

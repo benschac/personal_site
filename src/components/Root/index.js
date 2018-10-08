@@ -1,6 +1,9 @@
-import React from "react";
-import Navigation from "../Navigation";
-import "./index.css";
+import React, {Fragment} from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import App from "../App";
+import About from "../../pages/About";
+
+import "../../styles/index.global.css";
 
 /**
  * The Root Component
@@ -9,10 +12,12 @@ import "./index.css";
  */
 function Root() {
 	return (
-		<div>
-			<Navigation />
-      the root compomentn
-		</div>
+		<Router>
+			<Fragment>
+				<Route exact path="/" component={App}/>
+				<Route path="/about" component={About} />
+			</Fragment>
+		</Router>
 	);
 }
 
