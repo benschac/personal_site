@@ -1,5 +1,6 @@
 import React from "react";
 import classnames from "classnames";
+import Layout from "../index";
 import TwoPanel from "../../layout/TwoPanel"
 
 import {layout, select} from "./index.css";
@@ -23,6 +24,14 @@ class FourPanel extends React.Component {
     })
     console.log(panel, this.state.panel);
   }
+
+  onClose = (e) => {
+    e.stopPropagation();
+    console.log('fired on Close')
+    this.setState({
+      selected: null
+    })
+  }
 	
 	/** @inheritdoc */
 	render() {
@@ -43,8 +52,6 @@ class FourPanel extends React.Component {
               'display-none': !itemSelected && this.state.selected !== null,
               [select]: itemSelected
             });
-            console.log(item.left, item.right, 'xxx');
-            debugger;
 						return (
               <article 
                 key={item.title}
@@ -53,12 +60,11 @@ class FourPanel extends React.Component {
               >
               {
                 this.state.selected
-                ? (
-                  item.type === "twopanel" 
-                  && <TwoPanel
+                ? <Layout 
+                    type={item.type}
+                    onClose={this.onClose}
                     {...item}
                   />
-                )
                 : (
                   <div className={`
                     ${item.title}

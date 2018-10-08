@@ -1,16 +1,18 @@
 import React from "react";
-import {layout} from "./index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import {layout, close} from "./index.css";
 /**
  * @class TwoPanel
  */
 function TwoPanel({
-	left, right
+	left, right, onClose, title, item
 }) {
-	// debugger;
 	return (
 		<section className={layout}>
+			<FontAwesomeIcon onClick={onClose} icon={faTimes} size="3x" className={close} />
 			<article className="mt1">
-				{left.header}
+				<h1 className="h3">{left.header}</h1>
 				<ul>
 					{
 						left.list.map(item => {
@@ -20,11 +22,11 @@ function TwoPanel({
 				</ul>
 			</article>
 			<article className="mt1">
-				{right.header}
+				<h1 className="h3">{right.header}</h1>
 				<ul>
 					{
 						right.list.map(item => {
-							return <li key={item}>{item}</li>;
+							return <li className="mb1" key={item}>{item}</li>;
 						})
 					}
 				</ul>

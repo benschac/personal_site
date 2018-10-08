@@ -27,32 +27,56 @@ export default [
 					list: [
 						"platforms configuration panel",
 						"first-time user tutorial",
-						"refactor: ES6, CSS Modules, Redux and React 16",
+						"refactor: es6, css modules, react + redux",
 						"bug fixes",
 						"updated command center UI",
 						"generic components to repurpose",
-						"collaborate with backend-end, product + design"
+						"collaborate -> backend, product + design"
 					]
 				},
 				right: {
 					header: "Rose Digital",
 					list: [
 						<a key="roar" href="https://hearmyroarnow.org/">hear me roar</a>,
-
+						"react + redux + scss",
+						"card configurator",
+						"wall of cards",
+						"site wide fixes"
 					]
 				}
 			},
 			{
 				title: "tooling",
-				icon: <FontAwesomeIcon icon={faWrench} size="2x"/>
+				icon: <FontAwesomeIcon icon={faWrench} size="2x"/>,
+				type: "list",
+				content: [
+					"react",
+					"redux",
+					"postcss",
+					"es6+",
+					"babel",
+					"webpack",
+					"css variables",
+					"jest",
+					"css grid",
+					"flexbox",
+				]
 			},
 			{
 				title: "resources",
-				icon: <FontAwesomeIcon icon={faBook} size="2x"/>
+				icon: <FontAwesomeIcon icon={faBook} size="2x"/>,
+				type: "list",
+				content: [
+					"coming soon!"
+				]
 			},
 			{
 				title: "interests",
-				icon: <FontAwesomeIcon icon={faGlasses} size="2x"/>
+				icon: <FontAwesomeIcon icon={faGlasses} size="2x"/>,
+				type: "list",
+				content: [
+					"coming soon!"
+				]
 			}
 		]
 	},
@@ -82,7 +106,7 @@ export default [
 		classnames: "blogging",
 		header: "blogging",
 		content: [
-			"get the rss feed at some point"
+			<a target="_blank" href="https://medium.com/@benschac">medium</a>
 		]
 	},
 	{
@@ -103,8 +127,8 @@ export default [
 		classnames: "sideprojects",
 		header: "side projects",
 		content: [
-			"getSwol",
-			"menuw"
+			<a target="_blank" href="https://m.me/getSwolBot">getSwol</a>,
+			<a target="_blank" href="https://menuw.ai">menuw</a>,
 		]
 	},
 	{
@@ -112,19 +136,21 @@ export default [
 		header: "meaning",
 		type: "list",
 		content: [
-			"freeCodeCamp",
-			"facial paralysis",
-			"Rebecca purple",
-			"NYFD burn victims"
+			// "freeCodeCamp",
+			// "facial paralysis",
+			// "Rebecca purple",
+			// "NYFD burn victims",
+			"coming soon"
 		]
 	},
 	{
 		classnames: "chat",
 		header: "lets chat",
 		content: [
-			"github",
-			"linkedin",
-			"email",
+			<a key="github" target="_blank" href="https://github.com/benschac">github</a>,
+			<a key="linkedin" target="_blank" href="https://linkedin.com/in/benjaminschachter">linkedin</a>,
+			<a key="email" target="_blank" href="mailto:benschac@gmail.com">email</a>,
+			<a key="resume" target="_blank" href="../../../benjaminschachterresumeforweb.pdf">resume</a>
 		]
 	},
 	{
@@ -134,19 +160,35 @@ export default [
 		content: [
 			{
 				title: "eats",
-				icon: <FontAwesomeIcon icon={faUtensils} size="2x"/>
+				icon: <FontAwesomeIcon icon={faUtensils} size="2x"/>,
+				type: "list",
+				content: [
+					"coming soon!"
+				]
 			},
 			{
 				title: "places",
-				icon: <FontAwesomeIcon icon={faMapMarkedAlt} size="2x"/>
+				icon: <FontAwesomeIcon icon={faMapMarkedAlt} size="2x"/>,
+				type: "list",
+				content: [
+					"coming soon!"
+				]
 			},
 			{
 				title: "tunes",
-				icon: <FontAwesomeIcon icon={faHeadphonesAlt} size="2x"/>
+				icon: <FontAwesomeIcon icon={faHeadphonesAlt} size="2x"/>,
+				type: "list",
+				content: [
+					"coming soon!"
+				]
 			},
 			{
 				title: "sweets",
-				icon: <FontAwesomeIcon icon={faCookieBite} size="2x"/>
+				icon: <FontAwesomeIcon icon={faCookieBite} size="2x"/>,
+				type: "list",
+				content: [
+					"coming soon!"
+				]
 			}
 		]
 	}

@@ -27,3 +27,20 @@
   z-index: 11;
   border: 2px solid black;
 }
+
+
+@media (max-width: 750px), screen and (max-device-width: 750px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .select {
+    width: 90vw;
+    height: 85vh;
+  }
+}
+

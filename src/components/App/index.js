@@ -2,7 +2,9 @@ import React from "react";
 import Tile from "../Tile";
 import topics from "./meta";
 import Layout from "../../layout";
-import classnames from "./index.css";
+
+import classnames from "classnames"
+import classNames from "./index.css";
 /**
  * @class App
  */
@@ -23,18 +25,22 @@ class App extends React.Component {
 			<main>
 				{
 					topics.map(topic => {
-						const classname = classnames[topic.classnames];
+						const tileCls = classnames({
+							[classNames[topic.classnames]]: true,
+							[classNames['tile']]: true
+						});
+						
 						return (
 							<Tile
 								key={topic.classnames}
 								header={topic.header}
 								fontSize={topic.fontSize}
-								classnames={`${classname}${
-									classname === this.state.selected 
-										? ` ${classnames['selected']}` 
+								classnames={`${tileCls}${
+									tileCls === this.state.selected 
+										? ` ${classNames['selected']}` 
 										: ''}`
 								}
-								selected={classname === this.state.selected}
+								selected={tileCls === this.state.selected}
 								onClick={this.onClick}
 							>						
 								<Layout 
