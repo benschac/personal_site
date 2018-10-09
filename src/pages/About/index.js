@@ -5,11 +5,11 @@ import React from "react";
  * @class About
  */
 function About() {
-  return (
-    <div>
+	return (
+		<div>
     this is about
-    </div>
-  ); 
+		</div>
+	); 
 }
 
 export default About;

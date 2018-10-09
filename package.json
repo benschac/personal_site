@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch",
+    "start": "micro",
     "start:dev": "webpack-dev-server",
     "lint:fix": "./node_modules/.bin/eslint src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -39,7 +40,8 @@
     "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",

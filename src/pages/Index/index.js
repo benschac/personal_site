@@ -4,11 +4,11 @@ import Navigation from "../../components/Navigation";
  * @class Index
  */
 function Index() {
-  return (
-    <div>
+	return (
+		<div>
       Hello from Index
-    </div>
-  );
+		</div>
+	);
 }
 
 export default Index;
