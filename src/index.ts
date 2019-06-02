@@ -1,7 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { render } from 'react-dom';
-import _ from 'lodash';
+import { join } from 'lodash';
 import derp from './derp';
+import print from './print';
 // import './styles/index.global.css';
 
 function component() {
@@ -9,8 +10,8 @@ function component() {
    const button = document.createElement('button');
    const br = document.createElement('br');
 
-  button.innerHTML = 'Click me and look at the console!';
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  button.innerHTML = 'Click me and look at the do consolfe!';
+  element.innerHTML = join(['Hello', 'webpack'], ' ');
    element.appendChild(br);
    element.appendChild(button);
 
@@ -25,5 +26,14 @@ function component() {
   return element;
 }
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+  navigator.serviceWorker.register('/service-worker.js');
+    // .then(registration => console.log('SW registered: ', registration))
+    // .catch(registrationError => console.log('SW registration failed: ', registrationError));
+  });
+}
+
 document.body.appendChild(component());
+
 // render(<div>Hello World again and again</div>, document.getElementById('app'));
