@@ -34,7 +34,7 @@ module.exports = env => {
     mode: 'development',
     // polyfil for dynamic imports
     // https://github.com/babel/babel/issues/7824
-    entry: ['babel-polyfill', './src/index.ts'],
+    entry: ['babel-polyfill', './src/index.tsx'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       chunkFilename: '[name].[hash].bundle.js',

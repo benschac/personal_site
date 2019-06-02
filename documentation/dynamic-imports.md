@@ -1,10 +1,4 @@
-import * as React from 'react';
-import { render } from 'react-dom';
-import { join } from 'lodash';
-import derp from './derp';
-import print from './print';
-// import './styles/index.global.css';
-
+```js
 function component() {
   const element = document.createElement('div');
    const button = document.createElement('button');
@@ -25,15 +19,4 @@ function component() {
 
   return element;
 }
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-  navigator.serviceWorker.register('/service-worker.js');
-    // .then(registration => console.log('SW registered: ', registration))
-    // .catch(registrationError => console.log('SW registration failed: ', registrationError));
-  });
-}
-
-document.body.appendChild(component());
-
-// render(<div>Hello World again and again</div>, document.getElementById('app'));
+```
