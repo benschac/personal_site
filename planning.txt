@@ -1,0 +1,19 @@
+TODO
+
+Site Requirements:
+- SEO friendly / SSR.
+- Something that I won't have to configure forever.
+- Newsletter`
+
+
+
+Content
+- general about
+- Blog section.
+- About section with a timeline of work and talks.
+- Section for learning and open source.
+- Port over medium posts.
+- HTML Resume.
+- Hire me.
+- Causes I care about.
+- NYC --> Things I Enjoy
