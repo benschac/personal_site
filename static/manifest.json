@@ -2,13 +2,14 @@
 	"background_color": "#ffffff",
 	"theme_color": "#333333",
 	"name": "Benjamin Schachter",
-	"short_name": "Persional Site",
+	"short_name": "Personal Site",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
 		{
-			"src": "ben-filled.svg",
+			"src": "ben-background380.png",
 			"sizes": "512x512",
+			"type": "image/png"
 		}
 	]
 }
