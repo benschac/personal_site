@@ -7,9 +7,8 @@
 	"start_url": "/",
 	"icons": [
 		{
-			"src": "logo-512.png",
+			"src": "ben-filled.svg",
 			"sizes": "512x512",
-			"type": "image/png"
 		}
 	]
 }
