@@ -9,7 +9,7 @@ const contents = JSON.stringify(
   }),
 );
 
-export function get(req, res) {
+export function get(_, res) {
   res.writeHead(200, {
     'Content-Type': 'application/json',
   });
