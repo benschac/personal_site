@@ -1,34 +1,57 @@
-<!doctype html>
-<html lang='en'>
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
-	<meta name='theme-color' content='#333333'>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#333333" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.benjaminschachter.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Benjamin Schachter" />
+    <meta
+      property="og:description"
+      content="A Software Engineer Looking to Start His Next Chapter"
+    />
+    <meta property="og:site_name" content="Benjamin Schachter" />
 
-	%sapper.base%
+    <meta property="og:image" content="ben-background380.png" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1230" />
 
-	<link rel='stylesheet' href='global.css'>
-	<link rel='manifest' href='manifest.json' crossorigin='use-credentials'>
-	<link rel="apple-touch-icon" sizes="180x180" href="ben-background380.png">
-	<link rel='icon' type='image/png' href='ben-filled.svg'>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.benjaminschachter.com/" />
+    <meta property="twitter:title" content="Benjamin Schachter" />
+    <meta
+      property="twitter:description"
+      content="A Software Engineer Looking to Start His Next Chapter"
+    />
+    <meta property="twitter:image" content="ben-background380.png" />
 
-	<!-- Sapper generates a <style> tag containing critical CSS
+    %sapper.base%
+
+    <link rel="stylesheet" href="global.css" />
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+    <link rel="apple-touch-icon" sizes="180x180" href="ben-background380.png" />
+    <link rel="icon" type="image/png" href="ben-filled.svg" />
+
+    <!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
 	     lazily loaded when it precaches secondary pages -->
-	%sapper.styles%
+    %sapper.styles%
 
-	<!-- This contains the contents of the <svelte:head> component, if
+    <!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
-	%sapper.head%
-</head>
-<body>
-	<!-- The application will be rendered inside this element,
+    %sapper.head%
+  </head>
+  <body>
+    <!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
-	<div id='sapper'>%sapper.html%</div>
+    <div id="sapper">%sapper.html%</div>
 
-	<!-- Sapper creates a <script> tag containing `src/client.js`
+    <!-- Sapper creates a <script> tag containing `src/client.js`
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
-	%sapper.scripts%
-</body>
+    %sapper.scripts%
+  </body>
 </html>
