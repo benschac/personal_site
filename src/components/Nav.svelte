@@ -3,7 +3,7 @@
 </script>
 
 <style>
-  nav {
+  /* nav {
     border-bottom: var(--border-size) solid var(--border);
     font-weight: 300;
     padding: 0 1em;
@@ -11,7 +11,7 @@
 
   a img {
     width: 3rem;
-  }
+  } */
 </style>
 
 <nav>

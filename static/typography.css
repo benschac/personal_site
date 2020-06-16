@@ -1,11 +1,48 @@
-h1, h2, h3, h4, h5, h6 {
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	max-width: var(--measure);
+	background-color: inherit;
+  font-family: inherit;
+  color: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  border-style: solid;
+  border-width: 0;
+  border-color: currentColor;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
+	line-height: var(--line-height-small);
+	/* TODO -- Find a good Pairing */
+  /* font-family: var(--font-special); */
+	font-weight: 700;
+	letter-spacing: calc(-1 * var(--s-5));
 	color: var(--text-headline);
+  hyphens: auto;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
+h1, .h1 {
+	font-size: var(--s4);
+}
+
+h2, .h2 {
+	font-size: var(--s3);
+}
+
+h3, .h3 {
+	font-size: var(--s2);
+}
+
+h4, .h4 {
+	font-size: var(--s1);
+}
+
+p, .p {
+	font-size: var(--s0);
 }
