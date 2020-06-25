@@ -34,7 +34,7 @@ export default {
 			commonjs(),
 
 			legacy && babel({
-				extensions: ['.js', '.mjs', '.html', '.svelte', '.svg'],
+				extensions: ['.js', '.mjs', '.html', '.svelte'],
 				runtimeHelpers: true,
 				exclude: ['node_modules/@babel/**'],
 				presets: [
