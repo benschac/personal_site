@@ -5,7 +5,6 @@
 <svelte:head>
   <title>Benjamin Schachter</title>
 </svelte:head>
-
 <style>
 .hero {
   display: flex;
