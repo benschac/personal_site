@@ -1,61 +1,82 @@
 <script>
-  let heads = Array.from(...)
+  export let segment
 </script>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Benjamin Schachter</title>
 </svelte:head>
 
 <style>
-  .hero {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(12, minmax(var(--s1), 1fr));
-    grid-template-rows: repeat(12, minmax(var(--s1), 1fr));
-    column-gap: var(--s-3);
-    row-gap: var(--s-3);
-    /* background-image: url("../ben-filled.svg");
-    background-size: 5%; */
-    /* box-sizing: content-box; */
-  }
+.hero {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+}
 
-  .hero > h2,
-  .hero > h3 {
+  .name {
     border: var(--s-2) solid var(--text-primary);
-    padding: var(--s-1);
-    justify-self: center;
-    align-self: center;
-  }
-
-  .hero > h3 {
-    border: var(--s-3) solid var(--text-primary);
-  }
-  
-
-  .hero > .name {
-    grid-area: 6 / 3 / 8 / 11;
+    padding: var(--s-2);
     transform: skew(-16deg);
-    text-align: center;
+    margin-top: var(--s2);
   }
 
-  .hero > .action {
-    grid-area: 7 / 6 / 8 / 7;
-    transform: skew(-16deg);
-    z-index: 1;
+  header {
+    margin: 0 auto;
+    margin-top: var(--s3);
+    padding: 0 var(--s2);
+    background: var(--bg-secondary);
+    color: var(--bg-primary);
   }
 
-  .hero > .state {
-    grid-area: 9 / 4 / 10 / 9;
-  }
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.switcher > * > * {
+  --basis: 60rem;
+  flex-grow: 1;
+  /* TODO: Learn about this more */
+  flex-basis: calc((var(--basis) - (100% - var(--s1))) * 999);
+  margin: calc(var(--s1) / 2);
+}
+
+.text-align\:center {
+  text-align: center;
+}
+
+/* Not great, i'll allow it for now */
+.text-align\:center a {
+  text-decoration: none;
+}
+
+
 </style>
 
 <div class="hero">
+  <header>
+    <h1 class="name text-align:center h2">Benjamin Schachter</h1>
+  </header>
+  
 
-  {#each}
-
-  {/each}
-
-  <h2 class="name">Benjamin Schachter</h2>
-  <!-- <h3 class="action">is</h3> -->
-  <!-- <h2 class="state">Looking For A Job</h2> -->
+  <div class="switcher">
+    <div>
+      <div class="text-align:center">
+        <a aria-current={segment === undefined ? 'page' : undefined} href="/about">
+          <span class="h1">📖</span><h3>About</h3>
+        </a>
+      </div>
+      <div class="text-align:center">
+        <a aria-current={segment === undefined ? 'page' : undefined} href="/work">
+          <span class="h1">🧑🏻‍💻</span><h3>Work</h3>
+        </a>
+      </div>
+      <div class="text-align:center">
+        <a aria-current={segment === undefined ? 'page' : undefined} href="/contact">
+          <span class="h1">🤙🏻</span><h3>Contact</h3>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

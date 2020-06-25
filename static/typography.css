@@ -1,48 +1,51 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	max-width: var(--measure);
-	background-color: inherit;
+  box-sizing: border-box;
+  max-width: var(--measure);
   font-family: inherit;
   color: inherit;
   overflow-wrap: break-word;
   margin: 0;
   padding: 0;
-  border-style: solid;
   border-width: 0;
-  border-color: currentColor;
 }
 
 h1,
 h2,
 h3,
 h4 {
-	line-height: var(--line-height-small);
-	/* TODO -- Find a good Pairing */
+  line-height: var(--line-height-small);
+  /* TODO: https://web.dev/variable-fonts/ use variable fonts */
+  /* TODO -- Find a good Pairing */
   /* font-family: var(--font-special); */
-	font-weight: 700;
-	letter-spacing: calc(-1 * var(--s-5));
-	color: var(--text-headline);
+  font-weight: 700;
+  /* letter-spacing: calc(-1 * var(--s-5)); */
+  color: var(--text-headline);
   hyphens: auto;
 }
 
-h1, .h1 {
-	font-size: var(--s4);
+h1,
+.h1 {
+  font-size: var(--s4);
 }
 
-h2, .h2 {
-	font-size: var(--s3);
+h2,
+.h2 {
+  font-size: var(--s3);
 }
 
-h3, .h3 {
-	font-size: var(--s2);
+h3,
+.h3 {
+  font-size: var(--s2);
 }
 
-h4, .h4 {
-	font-size: var(--s1);
+h4,
+.h4 {
+  font-size: var(--s1);
 }
 
-p, .p {
-	font-size: var(--s0);
+p,
+.p {
+  font-size: var(--s0);
 }

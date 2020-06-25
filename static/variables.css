@@ -1,34 +1,36 @@
 :root {
-	/* TODO --  Use postCSS to get pow() function */
-	--font-size: min(max(1rem, 4vw), 22px);
-	--ratio: 1.5;
-	--line-height-small: calc(var(--ratio) * .7);
-	--measure: 60ch;
-	--s-5: calc(var(--s-4) / var(--ratio));
-	--s-4: calc(var(--s-3) / var(--ratio));
-	--s-3: calc(var(--s-2) / var(--ratio));
-	--s-2: calc(var(--s-1) / var(--ratio));
-	--s-1: calc(var(--s0) / var(--ratio));
-	--s0: var(--font-size);
-	--s1: calc(var(--s0) * var(--ratio));
-	--s2: calc(var(--s1) * var(--ratio));
-	--s3: calc(var(--s2) * var(--ratio));
-	--s4: calc(var(--s3) * var(--ratio));
-	--s5: calc(var(--s4) * var(--ratio));
+  /* TODO --  Use postCSS to get pow() function */
+  --font-size: min(max(1rem, 4vw), 22px);
+  /* Think about this */
+  /* https://hugogiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/?mc_cid=479294509c */
+  --ratio: 1.5;
+  --line-height-small: calc(var(--ratio) * 0.7);
+  --measure: 60ch;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: var(--font-size);
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
 
-	--white: #fffffe;
-	--navy-blue: #094067;
-	--baby-blue: #3da9fc;
-	--light-blue: #d8eefe;
-	--grey-blue: #90b4ce;
-	--red: #ef4565;
-	--grey: #5f6c7b;
+  --white: #fffffe;
+  --navy-blue: #094067;
+  --baby-blue: #3da9fc;
+  --light-blue: #d8eefe;
+  --grey-blue: #90b4ce;
+  --red: #ef4565;
+  --grey: #5f6c7b;
 
-	--bg-primary: var(--white);
-	--bg-secondary: var(--light-blue);
-	--bg-button: var(--baby-blue);
-	--text-button: var(--white);
-	--text-primary: var(--grey);
-	--text-headline: var(--navy-blue);
-	--border: var(--navy-blue);	
+  --bg-primary: var(--white);
+  --bg-secondary: var(--light-blue);
+  --bg-button: var(--baby-blue);
+  --text-button: var(--white);
+  --text-primary: var(--grey);
+  --text-headline: var(--navy-blue);
+  --border: var(--navy-blue);
 }
