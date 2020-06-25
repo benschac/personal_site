@@ -3,10 +3,10 @@
 <style>
   .contact {
     min-height: 100vh;
-    margin: 0 var(--s2);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    
+    max-width: 80rem;
     
   }
 
@@ -14,6 +14,8 @@
     display: flex;
     flex-grow: 1;
     justify-content: space-evenly;
+    flex-basis: 45rem;
+    flex-wrap: wrap;
   }
 
   .contact > div > div {
@@ -29,10 +31,10 @@
   </nav>
 
   <div>
-    <div><h3 class="h1">🐤</h3> <h3>Twitter</h3></div>
-    <div><h3 class="h1">👨🏻‍💼</h3> <h3>LinkedIn</h3></div>
-    <div><h3 class="h1">💻</h3> <h3>GitHub</h3></div>
-    <div><h3 class="h1">📧</h3> <h3>Email</h3></div>
+    <div><h3 class="h1">🐤</h3> <h3><a href="https://twitter.com/benschac">Twitter</a></h3></div>
+    <div><h3 class="h1">👨🏻‍💼</h3> <h3><a href="https://www.linkedin.com/in/benjaminschachter/">LinkedIn</a></h3></div>
+    <div><h3 class="h1">💻</h3> <h3> <a href="https://github.com/benschac">GitHub</a></h3></div>
+    <div><h3 class="h1">📧</h3><h3><a href="mailto:benschac@gmail.com">Email</a></h3></div>
   </div>
   
 </div>

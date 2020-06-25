@@ -45,7 +45,7 @@
 <div class="work">
   <nav class="nav">
     <a href="/." class="h3 nav-link">⬅</a>
-    <h3><i>resume</i> 📄</h3>
+    <h3><i><a target="_blank" href="BenjaminSchachterResumeInternetPublic.pdf">resume</a></i> 📄</h3>
   </nav>
   <div class="grid">
     <div class="grid__item">
