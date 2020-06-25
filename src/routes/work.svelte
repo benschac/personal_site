@@ -4,7 +4,7 @@
 <style>
 
 .nav {
-  margin: var(--s2) 0;
+  margin: var(--s2);
   display: flex;
 }
 
@@ -16,24 +16,25 @@
 
 .work {
   min-height: 100vh;
-  margin: 0 var(--s2);
+  margin: 0 auto;
+  max-width: 80rem;
 }
 
 .grid {
   display: grid;
-  /* minmax dis */
   grid-auto-rows: auto;
-  grid-template-columns: repeat(2, minmax( var(--s4), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   gap: var(--s-3);
-  place-content: center;
+  margin: 0 var(--s2);
 }
 
 .grid__item {
   border: var(--s-3) solid var(--text-primary);
   display: flex;
-  padding: var(--s0);
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: var(--s-1) 0;
 }
 
 
