@@ -14,7 +14,6 @@
     display: flex;
     flex-grow: 1;
     justify-content: space-evenly;
-    flex-basis: 45rem;
     flex-wrap: wrap;
   }
 

@@ -13,7 +13,7 @@
   height: 100vh;
 }
 
-  .name {
+ye  .name {
     border: var(--s-2) solid var(--text-primary);
     padding: var(--s-2);
     transform: skew(-16deg);
