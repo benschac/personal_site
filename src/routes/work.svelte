@@ -2,13 +2,11 @@
 </script>
 
 <style>
-
 .nav {
   margin: var(--s2) 0;
   display: flex;
   margin: var(--s2);
 }
-
 
 .nav-link {
     color: var(--text-headline);

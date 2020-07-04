@@ -3,6 +3,10 @@
 </svelte:head>
 <style>
 
+ul {
+  list-style: none;
+}
+
   .layout {
     --max-width: 80rem;
     max-width: var(--max-width);
@@ -37,6 +41,10 @@
     color: var(--text-headline);
   }
 
+  .italic {
+    font-style: italic;
+  }
+
 
 
 </style>
@@ -51,12 +59,12 @@
     </div>
     <div class="content">
     <ul>
-      <li><h4>Location: New York, NY</h4></li>
-      <li><h4>Profession: Software Engineer</h4></li>
-      <li><h4>Favorite Dog: They’re all good dogs</h4></li>
-      <li><h4>Favorite New Technology: Svelte</h4></li>
-      <li><h4>Tools: React, Redux, CSS, HTML, JavaScript, GraphQL</h4></li>
-      <li><h4>For fun: <span class="h3">🏃🏻</span>, <span class="h3">🏋🏻</span>, <span class="h3">🚴🏻</span>, <span>🏒</span>, Pretending the New Jersey Devils will have a competitive team.</h4></li>
+      <li><h4><span class="italic">Location</span>: New York, NY</h4></li>
+      <li><h4><span class="italic">Profession</span>: Software Engineer</h4></li>
+      <li><h4><span class="italic">Favorite Dog</span>: They’re all good dogs</h4></li>
+      <li><h4> <span class="italic">Favorite New Technology</span>: Svelte</h4></li>
+      <li><h4> <span class="italic">Tools</span>: React, Redux, CSS, HTML, JavaScript, GraphQL</h4></li>
+      <li><h4><span class="italic">For fun</span>: <span class="h3">🏃🏻</span>, <span class="h3">🏋🏻</span>, <span class="h3">🚴🏻</span>, <span>🏒</span>, Pretending the New Jersey Devils will have a competitive team.</h4></li>
     </ul>      
     </div>
   </section>
