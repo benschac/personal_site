@@ -1,6 +1,16 @@
 import "../styles/globals.css";
 import { NextComponentType } from "next";
 
+import {
+  defaultTheme,
+  ThemeProvider,
+  Preflight,
+} from "@xstyled/styled-components";
+
+const theme = {
+  ...defaultTheme,
+};
+
 type MyAppProps = {
   Component: NextComponentType;
   // TODO
@@ -9,7 +19,13 @@ type MyAppProps = {
 
 const MyApp: React.FC<MyAppProps> = (props) => {
   const { Component, pageProps } = props;
-  return <Component {...pageProps} />;
+
+  return (
+    <ThemeProvider {...{ theme }}>
+      <Preflight />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 };
 
 export default MyApp;
