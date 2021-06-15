@@ -21,7 +21,13 @@ const MyApp: React.FC<MyAppProps> = (props) => {
   const { Component, pageProps } = props;
 
   return (
-    <ThemeProvider {...{ theme }}>
+    <ThemeProvider
+      theme={{
+        ...defaultTheme,
+        sizes: { ...defaultTheme.sizes, ...theme.sizes },
+        colors: { ...defaultTheme.colors, ...theme.colors },
+      }}
+    >
       <Preflight />
       <Component {...pageProps} />
     </ThemeProvider>

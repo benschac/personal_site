@@ -1,5 +1,13 @@
-import { x } from "@xstyled/styled-components";
+import styled from "@xstyled/styled-components";
 
-export const Button: React.FC = (props) => {
-  return <x.button bg="blue-500" display="flex" {...props} />;
-};
+export const Button = styled.button`
+  border-radius: md;
+  font-weight: semibold;
+  transition: default;
+  background-color: emerald-500;
+  color: #fff;
+
+  @media (min-width: md) {
+    font-size: lg;
+  }
+`;

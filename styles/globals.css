@@ -14,3 +14,15 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+h1 {
+  padding-bottom: 2rem;
+}
+
+h2 {
+  padding-bottom: 2rem;
+}
+
+img {
+  text-align: center;
+}
